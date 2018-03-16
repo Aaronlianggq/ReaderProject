@@ -7,25 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E450C710205A59E800A3A645 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C70F205A59E800A3A645 /* AppDelegate.m */; };
-		E450C713205A59E800A3A645 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C712205A59E800A3A645 /* ViewController.m */; };
+		E450C710205A59E800A3A645 /* HZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C70F205A59E800A3A645 /* HZAppDelegate.m */; };
 		E450C716205A59E800A3A645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E450C714205A59E800A3A645 /* Main.storyboard */; };
 		E450C718205A59E800A3A645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E450C717205A59E800A3A645 /* Assets.xcassets */; };
 		E450C71B205A59E800A3A645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E450C719205A59E800A3A645 /* LaunchScreen.storyboard */; };
 		E450C71E205A59E800A3A645 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C71D205A59E800A3A645 /* main.m */; };
+		E450C7CE205B9F2000A3A645 /* HZBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7CD205B9F2000A3A645 /* HZBaseView.m */; };
+		E450C7D1205B9F4200A3A645 /* HZBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7D0205B9F4200A3A645 /* HZBaseTableView.m */; };
+		E450C7D4205B9FB700A3A645 /* HZBaseCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7D3205B9FB700A3A645 /* HZBaseCollectionView.m */; };
+		E450C7D7205B9FCB00A3A645 /* HZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7D6205B9FCB00A3A645 /* HZBaseViewController.m */; };
+		E450C7DA205BA09400A3A645 /* HZBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7D9205BA09400A3A645 /* HZBaseNavigationViewController.m */; };
+		E450C7E9205BA38100A3A645 /* BookShelfController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7E8205BA38100A3A645 /* BookShelfController.m */; };
+		E450C7EC205BA3B600A3A645 /* FeaturedAlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7EB205BA3B600A3A645 /* FeaturedAlbumController.m */; };
+		E450C7EF205BA3D600A3A645 /* ClassificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7EE205BA3D600A3A645 /* ClassificationController.m */; };
+		E450C7F2205BA3F100A3A645 /* DisCoveryController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7F1205BA3F100A3A645 /* DisCoveryController.m */; };
+		E450C7F5205BA53F00A3A645 /* HZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7F4205BA53F00A3A645 /* HZTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E450C70B205A59E800A3A645 /* BookReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E450C70E205A59E800A3A645 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E450C70F205A59E800A3A645 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E450C711205A59E800A3A645 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E450C712205A59E800A3A645 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E450C70E205A59E800A3A645 /* HZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZAppDelegate.h; sourceTree = "<group>"; };
+		E450C70F205A59E800A3A645 /* HZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZAppDelegate.m; sourceTree = "<group>"; };
 		E450C715205A59E800A3A645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E450C717205A59E800A3A645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E450C71A205A59E800A3A645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E450C71C205A59E800A3A645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E450C71D205A59E800A3A645 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E450C7CC205B9F2000A3A645 /* HZBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZBaseView.h; sourceTree = "<group>"; };
+		E450C7CD205B9F2000A3A645 /* HZBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBaseView.m; sourceTree = "<group>"; };
+		E450C7CF205B9F4200A3A645 /* HZBaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZBaseTableView.h; sourceTree = "<group>"; };
+		E450C7D0205B9F4200A3A645 /* HZBaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBaseTableView.m; sourceTree = "<group>"; };
+		E450C7D2205B9FB700A3A645 /* HZBaseCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZBaseCollectionView.h; sourceTree = "<group>"; };
+		E450C7D3205B9FB700A3A645 /* HZBaseCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBaseCollectionView.m; sourceTree = "<group>"; };
+		E450C7D5205B9FCB00A3A645 /* HZBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZBaseViewController.h; sourceTree = "<group>"; };
+		E450C7D6205B9FCB00A3A645 /* HZBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBaseViewController.m; sourceTree = "<group>"; };
+		E450C7D8205BA09400A3A645 /* HZBaseNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZBaseNavigationViewController.h; sourceTree = "<group>"; };
+		E450C7D9205BA09400A3A645 /* HZBaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBaseNavigationViewController.m; sourceTree = "<group>"; };
+		E450C7E7205BA38100A3A645 /* BookShelfController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookShelfController.h; sourceTree = "<group>"; };
+		E450C7E8205BA38100A3A645 /* BookShelfController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookShelfController.m; sourceTree = "<group>"; };
+		E450C7EA205BA3B600A3A645 /* FeaturedAlbumController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeaturedAlbumController.h; sourceTree = "<group>"; };
+		E450C7EB205BA3B600A3A645 /* FeaturedAlbumController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeaturedAlbumController.m; sourceTree = "<group>"; };
+		E450C7ED205BA3D600A3A645 /* ClassificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassificationController.h; sourceTree = "<group>"; };
+		E450C7EE205BA3D600A3A645 /* ClassificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassificationController.m; sourceTree = "<group>"; };
+		E450C7F0205BA3F100A3A645 /* DisCoveryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisCoveryController.h; sourceTree = "<group>"; };
+		E450C7F1205BA3F100A3A645 /* DisCoveryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisCoveryController.m; sourceTree = "<group>"; };
+		E450C7F3205BA53F00A3A645 /* HZTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTabBarController.h; sourceTree = "<group>"; };
+		E450C7F4205BA53F00A3A645 /* HZTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +85,11 @@
 		E450C70D205A59E800A3A645 /* BookReader */ = {
 			isa = PBXGroup;
 			children = (
-				E450C70E205A59E800A3A645 /* AppDelegate.h */,
-				E450C70F205A59E800A3A645 /* AppDelegate.m */,
-				E450C711205A59E800A3A645 /* ViewController.h */,
-				E450C712205A59E800A3A645 /* ViewController.m */,
+				E450C7C7205B9EDD00A3A645 /* HZBase */,
+				E450C7C9205B9EDD00A3A645 /* HZReaderBusiness */,
+				E450C7CA205B9EDD00A3A645 /* ThirdLib */,
+				E450C70E205A59E800A3A645 /* HZAppDelegate.h */,
+				E450C70F205A59E800A3A645 /* HZAppDelegate.m */,
 				E450C714205A59E800A3A645 /* Main.storyboard */,
 				E450C717205A59E800A3A645 /* Assets.xcassets */,
 				E450C719205A59E800A3A645 /* LaunchScreen.storyboard */,
@@ -69,6 +97,119 @@
 				E450C71D205A59E800A3A645 /* main.m */,
 			);
 			path = BookReader;
+			sourceTree = "<group>";
+		};
+		E450C7C7205B9EDD00A3A645 /* HZBase */ = {
+			isa = PBXGroup;
+			children = (
+				E450C7CB205B9EF700A3A645 /* BaseViews */,
+				E450C7C8205B9EDD00A3A645 /* BaseControllers */,
+			);
+			path = HZBase;
+			sourceTree = "<group>";
+		};
+		E450C7C8205B9EDD00A3A645 /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E450C7D5205B9FCB00A3A645 /* HZBaseViewController.h */,
+				E450C7D6205B9FCB00A3A645 /* HZBaseViewController.m */,
+				E450C7D8205BA09400A3A645 /* HZBaseNavigationViewController.h */,
+				E450C7D9205BA09400A3A645 /* HZBaseNavigationViewController.m */,
+			);
+			path = BaseControllers;
+			sourceTree = "<group>";
+		};
+		E450C7C9205B9EDD00A3A645 /* HZReaderBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				E450C7DD205BA11E00A3A645 /* Views */,
+				E450C7DC205BA11200A3A645 /* Controllers */,
+			);
+			path = HZReaderBusiness;
+			sourceTree = "<group>";
+		};
+		E450C7CA205B9EDD00A3A645 /* ThirdLib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdLib;
+			sourceTree = "<group>";
+		};
+		E450C7CB205B9EF700A3A645 /* BaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				E450C7CC205B9F2000A3A645 /* HZBaseView.h */,
+				E450C7CD205B9F2000A3A645 /* HZBaseView.m */,
+				E450C7CF205B9F4200A3A645 /* HZBaseTableView.h */,
+				E450C7D0205B9F4200A3A645 /* HZBaseTableView.m */,
+				E450C7D2205B9FB700A3A645 /* HZBaseCollectionView.h */,
+				E450C7D3205B9FB700A3A645 /* HZBaseCollectionView.m */,
+			);
+			path = BaseViews;
+			sourceTree = "<group>";
+		};
+		E450C7DB205BA0EF00A3A645 /* MainEntrance   */ = {
+			isa = PBXGroup;
+			children = (
+				E450C7F3205BA53F00A3A645 /* HZTabBarController.h */,
+				E450C7F4205BA53F00A3A645 /* HZTabBarController.m */,
+			);
+			path = "MainEntrance  ";
+			sourceTree = "<group>";
+		};
+		E450C7DC205BA11200A3A645 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E450C7DB205BA0EF00A3A645 /* MainEntrance   */,
+				E450C7E3205BA1BC00A3A645 /* BookShelf */,
+				E450C7E4205BA26900A3A645 /* FeaturedAlbum   */,
+				E450C7E5205BA2ED00A3A645 /* Classification */,
+				E450C7E6205BA32900A3A645 /* DisCovery */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E450C7DD205BA11E00A3A645 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E450C7E3205BA1BC00A3A645 /* BookShelf */ = {
+			isa = PBXGroup;
+			children = (
+				E450C7E7205BA38100A3A645 /* BookShelfController.h */,
+				E450C7E8205BA38100A3A645 /* BookShelfController.m */,
+			);
+			path = BookShelf;
+			sourceTree = "<group>";
+		};
+		E450C7E4205BA26900A3A645 /* FeaturedAlbum   */ = {
+			isa = PBXGroup;
+			children = (
+				E450C7EA205BA3B600A3A645 /* FeaturedAlbumController.h */,
+				E450C7EB205BA3B600A3A645 /* FeaturedAlbumController.m */,
+			);
+			path = "FeaturedAlbum  ";
+			sourceTree = "<group>";
+		};
+		E450C7E5205BA2ED00A3A645 /* Classification */ = {
+			isa = PBXGroup;
+			children = (
+				E450C7ED205BA3D600A3A645 /* ClassificationController.h */,
+				E450C7EE205BA3D600A3A645 /* ClassificationController.m */,
+			);
+			path = Classification;
+			sourceTree = "<group>";
+		};
+		E450C7E6205BA32900A3A645 /* DisCovery */ = {
+			isa = PBXGroup;
+			children = (
+				E450C7F0205BA3F100A3A645 /* DisCoveryController.h */,
+				E450C7F1205BA3F100A3A645 /* DisCoveryController.m */,
+			);
+			path = DisCovery;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +283,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E450C713205A59E800A3A645 /* ViewController.m in Sources */,
+				E450C7F5205BA53F00A3A645 /* HZTabBarController.m in Sources */,
+				E450C7D1205B9F4200A3A645 /* HZBaseTableView.m in Sources */,
 				E450C71E205A59E800A3A645 /* main.m in Sources */,
-				E450C710205A59E800A3A645 /* AppDelegate.m in Sources */,
+				E450C7DA205BA09400A3A645 /* HZBaseNavigationViewController.m in Sources */,
+				E450C7EF205BA3D600A3A645 /* ClassificationController.m in Sources */,
+				E450C7E9205BA38100A3A645 /* BookShelfController.m in Sources */,
+				E450C7D4205B9FB700A3A645 /* HZBaseCollectionView.m in Sources */,
+				E450C7F2205BA3F100A3A645 /* DisCoveryController.m in Sources */,
+				E450C710205A59E800A3A645 /* HZAppDelegate.m in Sources */,
+				E450C7CE205B9F2000A3A645 /* HZBaseView.m in Sources */,
+				E450C7D7205B9FCB00A3A645 /* HZBaseViewController.m in Sources */,
+				E450C7EC205BA3B600A3A645 /* FeaturedAlbumController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,13 +6,13 @@
 //  Copyright © 2018年 liang. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "HZAppDelegate.h"
 
-@interface AppDelegate ()
+@interface HZAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation HZAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

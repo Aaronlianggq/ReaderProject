@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  HZAppDelegate.h
 //  BookReader
 //
 //  Created by lianggq on 2018/3/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface HZAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
