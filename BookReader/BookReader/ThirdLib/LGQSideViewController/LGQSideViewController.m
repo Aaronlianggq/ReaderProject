@@ -183,6 +183,10 @@
     }
     return YES;
 }
+static void extracted(LGQSideViewController *object, CGFloat xoffset) {
+    [object layoutCurrentViewWithOffset:xoffset];
+}
+
 - (void)pan:(UIPanGestureRecognizer*)pan{
     if (_panGestureRecognizer.state==UIGestureRecognizerStateBegan) {
         _startPanPoint=_currentView.frame.origin;
@@ -217,14 +221,16 @@
         }
     }
     if (xoffset!=_currentView.frame.origin.x) {
-        [self layoutCurrentViewWithOffset:xoffset];
+        extracted(self, xoffset);
     }
     if (_panGestureRecognizer.state==UIGestureRecognizerStateEnded) {
         if (_currentView.frame.origin.x!=0 && _currentView.frame.origin.x!=_leftViewShowWidth && _currentView.frame.origin.x!=-_rightViewShowWidth) {
             if (_panMovingRightOrLeft && _currentView.frame.origin.x>20) {
                 [self showLeftViewController:true];
+                [self setPanLeftViewEnd:_leftViewShowWidth];
             }else if(!_panMovingRightOrLeft && _currentView.frame.origin.x<-20){
                 [self showRightViewController:true];
+                [self setPanRightViewEnd:_rightViewShowWidth];
             }else{
                 [self hideSideViewController];
             }
@@ -255,8 +261,6 @@
      [_currentView setFrame:CGRectMake(xoffset, _baseView.bounds.origin.y, _baseView.frame.size.width, _baseView.frame.size.height)];
     return;
     //*/
-
-//    /*平移带缩放效果的动画
     static CGFloat h2w = 0;
     if (h2w==0) {
         h2w = _baseView.frame.size.height/_baseView.frame.size.width;
@@ -267,31 +271,55 @@
 
     CGFloat totalWidth=_baseView.frame.size.width;
     CGFloat totalHeight=_baseView.frame.size.height;
-
+    CGFloat end_y = _baseView.bounds.origin.y;
+    
     UIDeviceOrientation oriention = [UIDevice currentDevice].orientation;
     if (UIDeviceOrientationIsLandscape(oriention)) {
         totalHeight=_baseView.frame.size.width;
         totalWidth=_baseView.frame.size.height;
     }
-
-    if (xoffset>0) {//向右滑的
-        [_currentView setFrame:CGRectMake(xoffset, _baseView.bounds.origin.y + (totalHeight * (1 - scale) / 2), totalWidth * scale, totalHeight * scale)];
-    }else{//向左滑的
-        [_currentView setFrame:CGRectMake(_baseView.frame.size.width * (1 - scale) + xoffset, _baseView.bounds.origin.y + (totalHeight*(1 - scale) / 2), totalWidth * scale, totalHeight * scale)];
-    }
-    _currentView.transform = CGAffineTransformMakeScale(scale, scale);
     
+    //    /*平移带缩放效果的动画
+    if(_useRootScaleAnimation){
+        totalWidth = totalWidth * scale;
+        totalHeight = totalHeight * scale;
+        end_y = _baseView.bounds.origin.y + (totalHeight * (1 - scale) / 2);
+        _currentView.transform = CGAffineTransformMakeScale(scale, scale);
+    }
+    
+    if (xoffset>0) {//向右滑的 显示leftView
+        [_currentView setFrame:CGRectMake(xoffset, end_y, totalWidth, totalHeight)];
+        [self setPanLeftViewEnd:xoffset];
+    }else{//向左滑的
+        [_currentView setFrame:CGRectMake(_baseView.frame.size.width * (1 - scale) + xoffset,end_y , totalWidth , totalHeight)];
+        [self setPanRightViewEnd:xoffset];
+    }
     //*/
+}
+
+- (void)setPanLeftViewEnd:(CGFloat)xoffset {
+    
+    if(_canLeftViewMove){
+        CGFloat currentX = _currentView.frame.origin.x;
+        CGRect leftRect = _leftViewController.view.frame;
+        CGFloat leftW = leftRect.size.width;
+        leftRect.origin.x = currentX - leftW + (1 - (xoffset / _leftViewShowWidth)) * 50;
+        _leftViewController.view.frame = leftRect;
+    }
+}
+
+- (void)setPanRightViewEnd:(CGFloat)xoffset {
+    //暂不实现
 }
 
 #pragma mark --setup property
 - (void)setup {
     
-    _leftViewShowWidth = SCREEN_WIDTH - 53;
-    _rightViewShowWidth = SCREEN_WIDTH - 53;
+    _leftViewShowWidth = SCREEN_WIDTH - 65;
+    _rightViewShowWidth = SCREEN_WIDTH - 65;
     _animationDuration = 0.35;
-    _showBoundsShadow = true;
-    
+    _showBoundsShadow = YES;
+    _canLeftViewMove = YES;
     _panGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pan:)];
     [_panGestureRecognizer setDelegate:self];
     

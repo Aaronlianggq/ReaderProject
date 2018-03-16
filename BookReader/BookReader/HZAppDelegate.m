@@ -57,7 +57,9 @@
     LGQSideViewController *sideVc = [storyboardMain instantiateViewControllerWithIdentifier:@"storyboardSideViewControoler"];
     sideVc.rootViewController = [[HZTabBarController alloc] init];
     sideVc.leftViewController = [[PersonalController alloc] init];
-    self.window.rootViewController = sideVc;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:sideVc];
+    [nav setNavigationBarHidden:YES animated:NO];
+    self.window.rootViewController = nav;
 }
 
 

@@ -20,6 +20,8 @@ typedef void(^RootViewMoveBlock)(UIView *rootView,CGRect orginFrame,CGFloat xoff
 @property (strong,nonatomic) UIViewController *rootViewController;
 @property (strong,nonatomic) UIViewController *leftViewController;
 @property (strong,nonatomic) UIViewController *rightViewController;
+@property (nonatomic) BOOL useRootScaleAnimation; //是否启用缩放效果
+@property (nonatomic) BOOL canLeftViewMove; //滑动时 左边view 是否可以移动
 
 @property (assign,nonatomic) CGFloat leftViewShowWidth;//左侧栏的展示大小
 @property (assign,nonatomic) CGFloat rightViewShowWidth;//右侧栏的展示大小
