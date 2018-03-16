@@ -22,6 +22,8 @@
 		E450C7EF205BA3D600A3A645 /* ClassificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7EE205BA3D600A3A645 /* ClassificationController.m */; };
 		E450C7F2205BA3F100A3A645 /* DisCoveryController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7F1205BA3F100A3A645 /* DisCoveryController.m */; };
 		E450C7F5205BA53F00A3A645 /* HZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7F4205BA53F00A3A645 /* HZTabBarController.m */; };
+		E450C7F8205BB78300A3A645 /* LGQSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7F7205BB78200A3A645 /* LGQSideViewController.m */; };
+		E450C7FC205BBB8B00A3A645 /* PersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7FB205BBB8B00A3A645 /* PersonalController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,10 @@
 		E450C7F1205BA3F100A3A645 /* DisCoveryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisCoveryController.m; sourceTree = "<group>"; };
 		E450C7F3205BA53F00A3A645 /* HZTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZTabBarController.h; sourceTree = "<group>"; };
 		E450C7F4205BA53F00A3A645 /* HZTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZTabBarController.m; sourceTree = "<group>"; };
+		E450C7F6205BB78200A3A645 /* LGQSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGQSideViewController.h; sourceTree = "<group>"; };
+		E450C7F7205BB78200A3A645 /* LGQSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGQSideViewController.m; sourceTree = "<group>"; };
+		E450C7FA205BBB8B00A3A645 /* PersonalController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalController.h; sourceTree = "<group>"; };
+		E450C7FB205BBB8B00A3A645 /* PersonalController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 		E450C7CA205B9EDD00A3A645 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				E450C7FD205BBD9A00A3A645 /* LGQSideViewController */,
 			);
 			path = ThirdLib;
 			sourceTree = "<group>";
@@ -160,6 +167,7 @@
 		E450C7DC205BA11200A3A645 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E450C7F9205BBB3A00A3A645 /* Personal */,
 				E450C7DB205BA0EF00A3A645 /* MainEntrance   */,
 				E450C7E3205BA1BC00A3A645 /* BookShelf */,
 				E450C7E4205BA26900A3A645 /* FeaturedAlbum   */,
@@ -210,6 +218,24 @@
 				E450C7F1205BA3F100A3A645 /* DisCoveryController.m */,
 			);
 			path = DisCovery;
+			sourceTree = "<group>";
+		};
+		E450C7F9205BBB3A00A3A645 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				E450C7FA205BBB8B00A3A645 /* PersonalController.h */,
+				E450C7FB205BBB8B00A3A645 /* PersonalController.m */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		E450C7FD205BBD9A00A3A645 /* LGQSideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E450C7F6205BB78200A3A645 /* LGQSideViewController.h */,
+				E450C7F7205BB78200A3A645 /* LGQSideViewController.m */,
+			);
+			path = LGQSideViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,10 +314,12 @@
 				E450C71E205A59E800A3A645 /* main.m in Sources */,
 				E450C7DA205BA09400A3A645 /* HZBaseNavigationViewController.m in Sources */,
 				E450C7EF205BA3D600A3A645 /* ClassificationController.m in Sources */,
+				E450C7FC205BBB8B00A3A645 /* PersonalController.m in Sources */,
 				E450C7E9205BA38100A3A645 /* BookShelfController.m in Sources */,
 				E450C7D4205B9FB700A3A645 /* HZBaseCollectionView.m in Sources */,
 				E450C7F2205BA3F100A3A645 /* DisCoveryController.m in Sources */,
 				E450C710205A59E800A3A645 /* HZAppDelegate.m in Sources */,
+				E450C7F8205BB78300A3A645 /* LGQSideViewController.m in Sources */,
 				E450C7CE205B9F2000A3A645 /* HZBaseView.m in Sources */,
 				E450C7D7205B9FCB00A3A645 /* HZBaseViewController.m in Sources */,
 				E450C7EC205BA3B600A3A645 /* FeaturedAlbumController.m in Sources */,

@@ -1,4 +1,4 @@
-*.json.lock
+project.json.lock
 /xcuserdata
 *.xcuserdatad
 */xcshareddata
