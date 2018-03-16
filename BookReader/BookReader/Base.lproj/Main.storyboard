@@ -27,19 +27,5 @@
             </objects>
             <point key="canvasLocation" x="-1350" y="-581"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="UV3-Nh-lzP">
-            <objects>
-                <tabBarController id="D4R-Iy-y2j" customClass="HZTabBarController" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CW7-U3-ozr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zbe-TF-Y7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1351" y="120"/>
-        </scene>
     </scenes>
 </document>
