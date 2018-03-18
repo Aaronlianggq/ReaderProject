@@ -754,7 +754,7 @@
 			isa = PBXGroup;
 			children = (
 				E450C924205EB78C00A3A645 /* HZDefineConfig */,
-				E450C923205E8A2400A3A645 /* Core */,
+				E450C923205E8A2400A3A645 /* BusinessCore */,
 				E445AF8E205ED1A1004DEE85 /* Categorys */,
 				E450C8DF205E508900A3A645 /* Http */,
 			);
@@ -809,7 +809,7 @@
 			path = BookModel;
 			sourceTree = "<group>";
 		};
-		E450C923205E8A2400A3A645 /* Core */ = {
+		E450C923205E8A2400A3A645 /* BusinessCore */ = {
 			isa = PBXGroup;
 			children = (
 				E445AFB3205ED77C004DEE85 /* ServerAddressManager */,
@@ -821,7 +821,7 @@
 				E445AFB0205ED402004DEE85 /* NSObject+Swizzle.h */,
 				E445AFB1205ED402004DEE85 /* NSObject+Swizzle.m */,
 			);
-			path = Core;
+			path = BusinessCore;
 			sourceTree = "<group>";
 		};
 		E450C924205EB78C00A3A645 /* HZDefineConfig */ = {
