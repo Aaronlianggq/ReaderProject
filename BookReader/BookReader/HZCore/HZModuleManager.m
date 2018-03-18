@@ -26,16 +26,22 @@ void RegisterHZModule(Class moduleClass) {
 @end
 
 @implementation HZModuleManager
-
+static HZModuleManager *instance;
 + (instancetype)sharedInstance {
-    
-    static HZModuleManager *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[HZModuleManager alloc] init];
     });
     
     return instance;
+}
+
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    return [self sharedInstance];
+}
+
+-(instancetype)copy {
+    return [HZModuleManager sharedInstance];
 }
 
 - (instancetype)init {
@@ -80,6 +86,8 @@ void RegisterHZModule(Class moduleClass) {
 }
 
 #pragma mark --modules
-
+- (BookModule *)bookModule {
+    return _modules[NSStringFromClass([BookModule class])];
+}
 
 @end

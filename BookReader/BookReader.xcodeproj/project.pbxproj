@@ -97,6 +97,7 @@
 		E450C90D205E526800A3A645 /* HZResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C90C205E526800A3A645 /* HZResponse.m */; };
 		E450C910205E754D00A3A645 /* HZModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C90F205E754D00A3A645 /* HZModule.m */; };
 		E450C913205E760600A3A645 /* HZModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C912205E760600A3A645 /* HZModuleManager.m */; };
+		E450C917205E7E1E00A3A645 /* BookModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C916205E7E1E00A3A645 /* BookModule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -282,6 +283,8 @@
 		E450C90F205E754D00A3A645 /* HZModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZModule.m; sourceTree = "<group>"; };
 		E450C911205E760600A3A645 /* HZModuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZModuleManager.h; sourceTree = "<group>"; };
 		E450C912205E760600A3A645 /* HZModuleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZModuleManager.m; sourceTree = "<group>"; };
+		E450C915205E7E1E00A3A645 /* BookModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookModule.h; sourceTree = "<group>"; };
+		E450C916205E7E1E00A3A645 /* BookModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookModule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -694,6 +697,7 @@
 		E450C8DE205E507B00A3A645 /* HZCore */ = {
 			isa = PBXGroup;
 			children = (
+				E450C914205E7DCF00A3A645 /* BookModule */,
 				E450C8DF205E508900A3A645 /* Http */,
 				E450C90E205E754D00A3A645 /* HZModule.h */,
 				E450C90F205E754D00A3A645 /* HZModule.m */,
@@ -714,6 +718,15 @@
 				E450C90C205E526800A3A645 /* HZResponse.m */,
 			);
 			path = Http;
+			sourceTree = "<group>";
+		};
+		E450C914205E7DCF00A3A645 /* BookModule */ = {
+			isa = PBXGroup;
+			children = (
+				E450C915205E7E1E00A3A645 /* BookModule.h */,
+				E450C916205E7E1E00A3A645 /* BookModule.m */,
+			);
+			path = BookModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -866,6 +879,7 @@
 				E450C8E5205E510400A3A645 /* HZURLRequest.m in Sources */,
 				E450C889205BD2CF00A3A645 /* SDWebImagePrefetcher.m in Sources */,
 				E450C8E2205E50B600A3A645 /* HZHttpSender.m in Sources */,
+				E450C917205E7E1E00A3A645 /* BookModule.m in Sources */,
 				E450C895205BD2CF00A3A645 /* UIView+WebCacheOperation.m in Sources */,
 				E450C8D9205BD3C800A3A645 /* MJRefreshHeader.m in Sources */,
 				E450C7D7205B9FCB00A3A645 /* HZBaseViewController.m in Sources */,

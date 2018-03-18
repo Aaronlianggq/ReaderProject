@@ -7,18 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-/**
- *  注册一个基础模块
- *
- *  @param moduleClass 要注册的基础模块类
- */
-OBJC_EXPORT void RegisterHZModule(Class moduleClass);
+#import "BookModule.h"
 
 
 /**
  *  管理所有的模块管理器
  */
 @interface HZModuleManager : NSObject
+
+@property (nonatomic,readonly) BookModule *bookModule;
+
 
 - (void)setUpAllModule;
 - (void)tearDownAllModule;

@@ -7,12 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HZModuleManager.h"
+#import "HZHttpSender.h"
+
+/**
+ *  注册一个基础模块
+ *
+ *  @param moduleClass 要注册的基础模块类
+ *  由HZModuleManager 去实现
+ */
+OBJC_EXPORT void RegisterHZModule(Class moduleClass);
 
 /**
  *  基础模块的生命周期
  */
-@protocol PJCModuleLifecycle <NSObject>
+@protocol HZModuleLifecycle <NSObject>
 
 @required
 /**
@@ -37,7 +45,7 @@
 /**
  模块管理
  */
-@interface HZModule : NSObject <PJCModuleLifecycle>
+@interface HZModule : NSObject <HZModuleLifecycle>
 
 
 
