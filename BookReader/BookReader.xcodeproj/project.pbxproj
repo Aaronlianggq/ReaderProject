@@ -95,6 +95,8 @@
 		E450C8E2205E50B600A3A645 /* HZHttpSender.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C8E1205E50B500A3A645 /* HZHttpSender.m */; };
 		E450C8E5205E510400A3A645 /* HZURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C8E4205E510400A3A645 /* HZURLRequest.m */; };
 		E450C90D205E526800A3A645 /* HZResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C90C205E526800A3A645 /* HZResponse.m */; };
+		E450C910205E754D00A3A645 /* HZModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C90F205E754D00A3A645 /* HZModule.m */; };
+		E450C913205E760600A3A645 /* HZModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C912205E760600A3A645 /* HZModuleManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -276,6 +278,10 @@
 		E450C8E4205E510400A3A645 /* HZURLRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZURLRequest.m; sourceTree = "<group>"; };
 		E450C90B205E526800A3A645 /* HZResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZResponse.h; sourceTree = "<group>"; };
 		E450C90C205E526800A3A645 /* HZResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZResponse.m; sourceTree = "<group>"; };
+		E450C90E205E754D00A3A645 /* HZModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZModule.h; sourceTree = "<group>"; };
+		E450C90F205E754D00A3A645 /* HZModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZModule.m; sourceTree = "<group>"; };
+		E450C911205E760600A3A645 /* HZModuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZModuleManager.h; sourceTree = "<group>"; };
+		E450C912205E760600A3A645 /* HZModuleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZModuleManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -688,12 +694,16 @@
 		E450C8DE205E507B00A3A645 /* HZCore */ = {
 			isa = PBXGroup;
 			children = (
-				E450C8DF205E508900A3A645 /* HZHttp */,
+				E450C8DF205E508900A3A645 /* Http */,
+				E450C90E205E754D00A3A645 /* HZModule.h */,
+				E450C90F205E754D00A3A645 /* HZModule.m */,
+				E450C911205E760600A3A645 /* HZModuleManager.h */,
+				E450C912205E760600A3A645 /* HZModuleManager.m */,
 			);
 			path = HZCore;
 			sourceTree = "<group>";
 		};
-		E450C8DF205E508900A3A645 /* HZHttp */ = {
+		E450C8DF205E508900A3A645 /* Http */ = {
 			isa = PBXGroup;
 			children = (
 				E450C8E0205E50B500A3A645 /* HZHttpSender.h */,
@@ -703,7 +713,7 @@
 				E450C90B205E526800A3A645 /* HZResponse.h */,
 				E450C90C205E526800A3A645 /* HZResponse.m */,
 			);
-			path = HZHttp;
+			path = Http;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -849,6 +859,7 @@
 				E450C8D3205BD3C800A3A645 /* MJRefreshAutoGifFooter.m in Sources */,
 				E450C813205BD1F200A3A645 /* AFSecurityPolicy.m in Sources */,
 				E450C7CE205B9F2000A3A645 /* HZBaseView.m in Sources */,
+				E450C910205E754D00A3A645 /* HZModule.m in Sources */,
 				E450C8D4205BD3C800A3A645 /* MJRefreshAutoNormalFooter.m in Sources */,
 				E450C8D1205BD3C800A3A645 /* MJRefreshBackNormalFooter.m in Sources */,
 				E450C8CF205BD3C800A3A645 /* MJRefreshBackGifFooter.m in Sources */,
@@ -861,6 +872,7 @@
 				E450C88B205BD2CF00A3A645 /* NSButton+WebCache.m in Sources */,
 				E450C8CC205BD3C800A3A645 /* UIScrollView+MJExtension.m in Sources */,
 				E450C7EC205BA3B600A3A645 /* FeaturedAlbumController.m in Sources */,
+				E450C913205E760600A3A645 /* HZModuleManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

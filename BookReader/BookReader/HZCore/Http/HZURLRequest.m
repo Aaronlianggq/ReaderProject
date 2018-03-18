@@ -68,6 +68,7 @@ static float hzTimeout = 10.f;
     
 }
 
+#pragma mark util
 + (NSData *)jsonDataForNSDictionary:(NSDictionary *)dataDic {
     if ([NSJSONSerialization isValidJSONObject:dataDic]) {
         NSError *error = nil;
@@ -92,6 +93,7 @@ static float hzTimeout = 10.f;
     self.timeoutInterval = hzTimeout;
 }
 
+#pragma mark private
 - (void)addDefaultHttpFeild{
     [self setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     [self setValue:@"application/json" forHTTPHeaderField:@"Accept"];

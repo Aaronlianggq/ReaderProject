@@ -13,7 +13,7 @@
 /**
  设置全局的超时时间
 
- @param timeout
+ @param timeout 时间
  */
 + (void)setTimeout:(float)timeout;
 
