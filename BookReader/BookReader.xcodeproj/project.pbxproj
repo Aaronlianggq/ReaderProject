@@ -344,6 +344,7 @@
 		E450C922205E88F900A3A645 /* HZDefineConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZDefineConfig.h; sourceTree = "<group>"; };
 		E450C926205EB83D00A3A645 /* HZServerAddressManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZServerAddressManager.h; sourceTree = "<group>"; };
 		E450C927205EB83D00A3A645 /* HZServerAddressManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZServerAddressManager.m; sourceTree = "<group>"; };
+		E4890C45205EE319009E9E31 /* HZModuleModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZModuleModelProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -880,6 +881,7 @@
 				E450C912205E760600A3A645 /* HZCentralManager.m */,
 				E445AFB0205ED402004DEE85 /* NSObject+Swizzle.h */,
 				E445AFB1205ED402004DEE85 /* NSObject+Swizzle.m */,
+				E4890C45205EE319009E9E31 /* HZModuleModelProtocol.h */,
 			);
 			path = BusinessCore;
 			sourceTree = "<group>";

@@ -35,26 +35,42 @@
     return @"";
 }
 
-- (void)getBookInfoUrlCallBack:(void (^)(BookModel *model))callback {
+- (NSString *)getUserShelfBooksUrl {
+    return @"";
+}
+
+#pragma mark publick
+- (void)getBookInfoUrlCallBack:(void (^)(NSObject<HZModuleModelProtocol> *model))callback
+             withProtocalClass:(Class)classModel{
+    if(![self isClassToModuleProtocal:classModel]){
+        return;
+    }
     
     [HZHttpSender httpDataGet:self.getBookInfoUrl params:nil callBack:^(HZResponse *response) {
         if(response.isError){
             callback(nil);
         }else{
             NSDictionary *body = response.body;
-            BookModel *model = [[BookModel alloc] initWithDictionary:body];
+            NSObject <HZModuleModelProtocol> *model = [[classModel alloc] init];
+            
+            [model setParamsWithDictionary:body];
             callback(model);
         }
     }];
 }
 
-- (void)getUserShelfBooksCallBack:(void (^)(NSArray<BookModel *> *bookModels))callback {
+- (void)getUserShelfBooksCallBack:(void (^)(NSArray<NSObject<HZModuleModelProtocol> *> *bookModels))callback
+                withProtocalClass:(Class)classModel {
+    if(![self isClassToModuleProtocal:classModel]){
+        return;
+    }
+    
     [HZHttpSender httpDataGet:self.getUserShelfBooksUrl params:nil callBack:^(HZResponse *response) {
         if(response.isError){
             callback(nil);
         }else{
             NSArray *bodyArr = response.body;
-            NSArray *bookModels = [BookModel getModelsWithArray:bodyArr];
+            NSArray *bookModels = [classModel getModelsWithArray:bodyArr];
             callback(bookModels);
         }
         

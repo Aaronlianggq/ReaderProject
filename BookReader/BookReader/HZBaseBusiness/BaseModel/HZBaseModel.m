@@ -11,13 +11,8 @@
 
 @implementation HZBaseModel
 
-- (instancetype)initWithDictionary:(NSDictionary *)modelData {
-    
-    self = [super init];
-    if(self){
-        [self mj_setKeyValues:modelData];
-    }
-    return self;
+- (void)setParamsWithDictionary:(NSDictionary *)modelData {
+    [self mj_setKeyValues:modelData];
 }
 
 - (NSDictionary *)toDictionary {

@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 #import "HZHttpSender.h"
+#import "HZModuleModelProtocol.h"
 
 #define HZ_Current_Host     [HZModule getHostString]
 
@@ -49,6 +51,7 @@ OBJC_EXPORT void RegisterHZModule(Class moduleClass);
  */
 @interface HZModule : NSObject <HZModuleLifecycle>
 
+- (BOOL)isClassToModuleProtocal:(Class)aclass;
 
 /**
  由中央管理器构造 CentralManager

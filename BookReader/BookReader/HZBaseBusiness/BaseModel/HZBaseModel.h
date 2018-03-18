@@ -7,14 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HZModuleModelProtocol.h"
 
+@interface HZBaseModel : NSObject <HZModuleModelProtocol>
 
-@interface HZBaseModel : NSObject
-
-- (instancetype)initWithDictionary:(NSDictionary *)modelData;
-
-- (NSDictionary *)toDictionary;
-
-+ (NSMutableArray <HZBaseModel *> *)getModelsWithArray:(NSArray *)modelDatas;
 
 @end

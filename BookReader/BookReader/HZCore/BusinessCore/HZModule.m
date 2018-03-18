@@ -10,10 +10,21 @@
 #import "HZCentralManager.h"
 
 @interface HZModule()
+
 @end
 
 @implementation HZModule
 
+- (BOOL)isClassToModuleProtocal:(Class)aclass {
+    
+    BOOL isToProtocal = [aclass conformsToProtocol:@protocol(HZModuleModelProtocol)];
+#ifdef DEBUG
+    if(!isToProtocal){
+        NSAssert(NO, @"%@ is not to HZModuleModelProtocol",NSStringFromClass(aclass));
+    }
+#endif
+    return isToProtocal;
+}
 
 /**
  由中央管理器创建
@@ -41,5 +52,6 @@
 + (NSString *)getHostString {
     return [hzManager.serverManger getCurrentHttpServerHost];
 }
+
 @end
 

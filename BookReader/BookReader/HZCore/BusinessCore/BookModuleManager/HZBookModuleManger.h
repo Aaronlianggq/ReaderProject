@@ -15,12 +15,14 @@
  获取书籍信息
  @param callback    返回结果
  */
-- (void)getBookInfoUrlCallBack:(void (^)(BookModel *model))callback;
+- (void)getBookInfoUrlCallBack:(void (^)(NSObject<HZModuleModelProtocol> *model))callback
+             withProtocalClass:(Class<HZModuleModelProtocol>)classModel;
 
 /**
  获取当前用户书架的信息
  @param callback    返回结果
  */
-- (void)getUserShelfBooksCallBack:(void (^)(NSArray<BookModel *> *bookModels))callback;
+- (void)getUserShelfBooksCallBack:(void (^)(NSArray<NSObject<HZModuleModelProtocol> *> *bookModels))callback
+                withProtocalClass:(Class<HZModuleModelProtocol>)classModel;
 
 @end
