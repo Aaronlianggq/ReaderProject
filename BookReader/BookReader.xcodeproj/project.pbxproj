@@ -96,10 +96,11 @@
 		E450C8E5205E510400A3A645 /* HZURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C8E4205E510400A3A645 /* HZURLRequest.m */; };
 		E450C90D205E526800A3A645 /* HZResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C90C205E526800A3A645 /* HZResponse.m */; };
 		E450C910205E754D00A3A645 /* HZModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C90F205E754D00A3A645 /* HZModule.m */; };
-		E450C913205E760600A3A645 /* HZModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C912205E760600A3A645 /* HZModuleManager.m */; };
-		E450C917205E7E1E00A3A645 /* BookModuleManger.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C916205E7E1E00A3A645 /* BookModuleManger.m */; };
+		E450C917205E7E1E00A3A645 /* HZBookModuleManger.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C916205E7E1E00A3A645 /* HZBookModuleManger.m */; };
 		E450C91B205E838E00A3A645 /* HZBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C91A205E838E00A3A645 /* HZBaseModel.m */; };
 		E450C920205E83CA00A3A645 /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C91F205E83CA00A3A645 /* BookModel.m */; };
+		E450C928205EB83D00A3A645 /* HZServerAddressManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C927205EB83D00A3A645 /* HZServerAddressManager.m */; };
+		E450C929205EBFF800A3A645 /* HZCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C912205E760600A3A645 /* HZCentralManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -283,15 +284,17 @@
 		E450C90C205E526800A3A645 /* HZResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZResponse.m; sourceTree = "<group>"; };
 		E450C90E205E754D00A3A645 /* HZModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZModule.h; sourceTree = "<group>"; };
 		E450C90F205E754D00A3A645 /* HZModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZModule.m; sourceTree = "<group>"; };
-		E450C911205E760600A3A645 /* HZModuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZModuleManager.h; sourceTree = "<group>"; };
-		E450C912205E760600A3A645 /* HZModuleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZModuleManager.m; sourceTree = "<group>"; };
-		E450C915205E7E1E00A3A645 /* BookModuleManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookModuleManger.h; sourceTree = "<group>"; };
-		E450C916205E7E1E00A3A645 /* BookModuleManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookModuleManger.m; sourceTree = "<group>"; };
+		E450C911205E760600A3A645 /* HZCentralManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCentralManager.h; sourceTree = "<group>"; };
+		E450C912205E760600A3A645 /* HZCentralManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCentralManager.m; sourceTree = "<group>"; };
+		E450C915205E7E1E00A3A645 /* HZBookModuleManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZBookModuleManger.h; sourceTree = "<group>"; };
+		E450C916205E7E1E00A3A645 /* HZBookModuleManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBookModuleManger.m; sourceTree = "<group>"; };
 		E450C919205E838E00A3A645 /* HZBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZBaseModel.h; sourceTree = "<group>"; };
 		E450C91A205E838E00A3A645 /* HZBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBaseModel.m; sourceTree = "<group>"; };
 		E450C91E205E83CA00A3A645 /* BookModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
 		E450C91F205E83CA00A3A645 /* BookModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookModel.m; sourceTree = "<group>"; };
 		E450C922205E88F900A3A645 /* HZDefineConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZDefineConfig.h; sourceTree = "<group>"; };
+		E450C926205EB83D00A3A645 /* HZServerAddressManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZServerAddressManager.h; sourceTree = "<group>"; };
+		E450C927205EB83D00A3A645 /* HZServerAddressManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZServerAddressManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -706,6 +709,7 @@
 		E450C8DE205E507B00A3A645 /* HZCore */ = {
 			isa = PBXGroup;
 			children = (
+				E450C924205EB78C00A3A645 /* HZDefineConfig */,
 				E450C923205E8A2400A3A645 /* Core */,
 				E450C914205E7DCF00A3A645 /* BookModuleManager */,
 				E450C8DF205E508900A3A645 /* Http */,
@@ -729,8 +733,8 @@
 		E450C914205E7DCF00A3A645 /* BookModuleManager */ = {
 			isa = PBXGroup;
 			children = (
-				E450C915205E7E1E00A3A645 /* BookModuleManger.h */,
-				E450C916205E7E1E00A3A645 /* BookModuleManger.m */,
+				E450C915205E7E1E00A3A645 /* HZBookModuleManger.h */,
+				E450C916205E7E1E00A3A645 /* HZBookModuleManger.m */,
 			);
 			path = BookModuleManager;
 			sourceTree = "<group>";
@@ -764,13 +768,22 @@
 		E450C923205E8A2400A3A645 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E450C922205E88F900A3A645 /* HZDefineConfig.h */,
 				E450C90E205E754D00A3A645 /* HZModule.h */,
 				E450C90F205E754D00A3A645 /* HZModule.m */,
-				E450C911205E760600A3A645 /* HZModuleManager.h */,
-				E450C912205E760600A3A645 /* HZModuleManager.m */,
+				E450C911205E760600A3A645 /* HZCentralManager.h */,
+				E450C912205E760600A3A645 /* HZCentralManager.m */,
+				E450C926205EB83D00A3A645 /* HZServerAddressManager.h */,
+				E450C927205EB83D00A3A645 /* HZServerAddressManager.m */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		E450C924205EB78C00A3A645 /* HZDefineConfig */ = {
+			isa = PBXGroup;
+			children = (
+				E450C922205E88F900A3A645 /* HZDefineConfig.h */,
+			);
+			path = HZDefineConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -867,6 +880,7 @@
 				E450C83B205BD25E00A3A645 /* MASViewAttribute.m in Sources */,
 				E450C880205BD2CF00A3A645 /* SDWebImageFrame.m in Sources */,
 				E450C832205BD25E00A3A645 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				E450C929205EBFF800A3A645 /* HZCentralManager.m in Sources */,
 				E450C8D8205BD3C800A3A645 /* MJRefreshFooter.m in Sources */,
 				E450C88F205BD2CF00A3A645 /* SDWebImageTransition.m in Sources */,
 				E450C7D1205B9F4200A3A645 /* HZBaseTableView.m in Sources */,
@@ -901,6 +915,7 @@
 				E450C80F205BD1F200A3A645 /* AFHTTPSessionManager.m in Sources */,
 				E450C8D7205BD3C800A3A645 /* MJRefreshGifHeader.m in Sources */,
 				E450C811205BD1F200A3A645 /* AFURLRequestSerialization.m in Sources */,
+				E450C928205EB83D00A3A645 /* HZServerAddressManager.m in Sources */,
 				E450C7E9205BA38100A3A645 /* BookShelfController.m in Sources */,
 				E450C8D5205BD3C800A3A645 /* MJRefreshNormalHeader.m in Sources */,
 				E450C7D4205B9FB700A3A645 /* HZBaseCollectionView.m in Sources */,
@@ -925,14 +940,13 @@
 				E450C8E5205E510400A3A645 /* HZURLRequest.m in Sources */,
 				E450C889205BD2CF00A3A645 /* SDWebImagePrefetcher.m in Sources */,
 				E450C8E2205E50B600A3A645 /* HZHttpSender.m in Sources */,
-				E450C917205E7E1E00A3A645 /* BookModuleManger.m in Sources */,
+				E450C917205E7E1E00A3A645 /* HZBookModuleManger.m in Sources */,
 				E450C895205BD2CF00A3A645 /* UIView+WebCacheOperation.m in Sources */,
 				E450C8D9205BD3C800A3A645 /* MJRefreshHeader.m in Sources */,
 				E450C7D7205B9FCB00A3A645 /* HZBaseViewController.m in Sources */,
 				E450C88B205BD2CF00A3A645 /* NSButton+WebCache.m in Sources */,
 				E450C8CC205BD3C800A3A645 /* UIScrollView+MJExtension.m in Sources */,
 				E450C7EC205BA3B600A3A645 /* FeaturedAlbumController.m in Sources */,
-				E450C913205E760600A3A645 /* HZModuleManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,19 @@
 
 @implementation HZModule
 
+
+/**
+ 由中央管理器创建
+
+ @return nil
+ */
+- (id)init
+{
+    [self doesNotRecognizeSelector:@selector(init)];
+    return nil;
+}
+
+
 - (void)setupWithContainer {}
 - (void)teardownWithContainer {}
 

@@ -1,5 +1,5 @@
 //
-//  HZModuleManager.h
+//  HZCentralManager.h
 //  BookReader
 //
 //  Created by lianggq on 2018/3/18.
@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BookModuleManger.h"
+#import "HZBookModuleManger.h"
 
 /**
  *  管理所有的模块管理器
  */
-@interface HZModuleManager : NSObject
+@interface HZCentralManager : NSObject
 
-@property (nonatomic,readonly) BookModuleManger *bookModule;
+@property (nonatomic,readonly) HZBookModuleManger *bookModule;
 
 
 - (void)setUpAllModule;

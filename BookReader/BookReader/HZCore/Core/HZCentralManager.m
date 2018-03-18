@@ -1,12 +1,12 @@
 //
-//  HZModuleManager.m
+//  HZCentralManager.m
 //  BookReader
 //
 //  Created by lianggq on 2018/3/18.
 //  Copyright © 2018年 liang. All rights reserved.
 //
 
-#import "HZModuleManager.h"
+#import "HZCentralManager.h"
 #import "HZModule.h"
 
 static NSMutableSet *ModuleClassSet;
@@ -20,17 +20,17 @@ void RegisterHZModule(Class moduleClass) {
     [ModuleClassSet addObject:moduleClass];
 }
 
-@interface HZModuleManager() {
+@interface HZCentralManager() {
     NSMutableDictionary *_modules;
 }
 @end
 
-@implementation HZModuleManager
-static HZModuleManager *instance;
+@implementation HZCentralManager
+static HZCentralManager *instance;
 + (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[HZModuleManager alloc] init];
+        instance = [[HZCentralManager alloc] init];
     });
     
     return instance;
@@ -41,7 +41,7 @@ static HZModuleManager *instance;
 }
 
 -(instancetype)copy {
-    return [HZModuleManager sharedInstance];
+    return [HZCentralManager sharedInstance];
 }
 
 - (instancetype)init {
@@ -86,8 +86,8 @@ static HZModuleManager *instance;
 }
 
 #pragma mark --modules
-- (BookModuleManger *)bookModule {
-    return _modules[NSStringFromClass([BookModuleManger class])];
+- (HZBookModuleManger *)bookModule {
+    return _modules[NSStringFromClass([HZBookModuleManger class])];
 }
 
 @end

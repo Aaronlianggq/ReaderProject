@@ -1,13 +1,13 @@
 //
-//  BookModuleManger.m
+//  HZBookModuleManger.m
 //  BookReader
 //
 //  Created by lianggq on 2018/3/18.
 //  Copyright © 2018年 liang. All rights reserved.
 //
 
-#import "BookModuleManger.h"
-@interface BookModuleManger()
+#import "HZBookModuleManger.h"
+@interface HZBookModuleManger()
 
 @property (nonatomic,copy) NSString *getBookInfoUrl;
 
@@ -15,15 +15,14 @@
 
 @end
 
-@implementation BookModuleManger
-
+@implementation HZBookModuleManger
 + (void)load {
     RegisterHZModule([self class]);
 }
 
 #pragma mark --override
 - (void)setupWithContainer {
-    
+
 }
 
 - (void)teardownWithContainer {

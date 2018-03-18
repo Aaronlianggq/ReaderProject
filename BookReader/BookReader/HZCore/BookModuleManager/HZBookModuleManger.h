@@ -1,5 +1,5 @@
 //
-//  BookModuleManger.h
+//  HZBookModuleManger.h
 //  BookReader
 //
 //  Created by lianggq on 2018/3/18.
@@ -9,7 +9,7 @@
 #import "HZModule.h"
 #import "BookModel.h"
 
-@interface BookModuleManger : HZModule
+@interface HZBookModuleManger : HZModule
 
 /**
  获取书籍信息
