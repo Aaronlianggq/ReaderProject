@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "HZBookModuleManger.h"
+#import "HZServerAddressManager.h"
 
 #define hzManager     [HZCentralManager sharedInstance]
 
@@ -17,7 +18,9 @@
 @interface HZCentralManager : NSObject
 
 ///书籍管理器
-@property (nonatomic,readonly) HZBookModuleManger *bookModule;
+@property (nonatomic,readonly) HZBookModuleManger *bookModuleManger;
+///服务地址管理器
+@property (nonatomic,readonly) HZServerAddressManager *serverManger;
 
 + (instancetype)sharedInstance;
 

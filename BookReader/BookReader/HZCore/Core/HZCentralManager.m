@@ -116,8 +116,12 @@ static HZCentralManager *_instance;
 }
 
 #pragma mark --modules
-- (HZBookModuleManger *)bookModule {
+- (HZBookModuleManger *)bookModuleManger {
     return [self managerForClass:[HZBookModuleManger class]];
+}
+
+- (HZServerAddressManager *)serverManger {
+    return [self managerForClass:[HZServerAddressManager class]];
 }
 
 @end

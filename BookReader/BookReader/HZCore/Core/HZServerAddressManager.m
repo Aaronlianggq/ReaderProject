@@ -61,21 +61,19 @@
 }
 
 - (NSString *)getCurrentHttpServerHost {
-    @synchronized(self){
-        return _hostDic[HZHttpHostKey];
-    }
+    return _hostDic[HZHttpHostKey];
 }
 
 #pragma mark private
 - (void)setHttpHostDebug {
     @synchronized(self){
-        [_hostDic setObject:@"https://hz.com/" forKey:HZHttpHostKey];
+        [_hostDic setObject:@"https://hz.test.com/" forKey:HZHttpHostKey];
     }
 }
 
 - (void)setHttpHostRelease {
     @synchronized(self){
-        [_hostDic setObject:@"https://hz.test.com/" forKey:HZHttpHostKey];
+        [_hostDic setObject:@"https://hz.com/" forKey:HZHttpHostKey];
     }
 }
 @end

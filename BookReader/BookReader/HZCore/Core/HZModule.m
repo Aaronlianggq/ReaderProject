@@ -35,10 +35,11 @@
     return self;
 }
 
-
 - (void)setupWithContainer {}
 - (void)teardownWithContainer {}
 
-
++ (NSString *)getHostString {
+    return [hzManager.serverManger getCurrentHttpServerHost];
+}
 @end
 
