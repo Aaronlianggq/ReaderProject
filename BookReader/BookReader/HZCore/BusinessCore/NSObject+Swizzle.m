@@ -9,7 +9,6 @@
 #import "NSObject+Swizzle.h"
 #import <objc/runtime.h>
 
-
 @implementation NSObject (Swizzle)
 
 #pragma mark - swizzle method
@@ -75,7 +74,7 @@
 #ifdef DEBUG
         NSAssert(NO, @"key and content can't be nil for %@",NSStringFromClass([self class]));
 #else
-        DEBUG_LOG(@"key and content can't be nil for %@",NSStringFromClass([self class]));
+    
 #endif
         return;
     }
