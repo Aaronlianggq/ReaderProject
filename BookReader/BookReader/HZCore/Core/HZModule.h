@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "HZHttpSender.h"
+#import "HZDefineConfig.h"
 
 /**
  *  注册一个基础模块

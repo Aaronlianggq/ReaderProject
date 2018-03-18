@@ -7,15 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BookModule.h"
-
+#import "BookModuleManger.h"
 
 /**
  *  管理所有的模块管理器
  */
 @interface HZModuleManager : NSObject
 
-@property (nonatomic,readonly) BookModule *bookModule;
+@property (nonatomic,readonly) BookModuleManger *bookModule;
 
 
 - (void)setUpAllModule;

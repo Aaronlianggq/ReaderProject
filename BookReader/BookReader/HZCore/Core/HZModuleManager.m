@@ -86,8 +86,8 @@ static HZModuleManager *instance;
 }
 
 #pragma mark --modules
-- (BookModule *)bookModule {
-    return _modules[NSStringFromClass([BookModule class])];
+- (BookModuleManger *)bookModule {
+    return _modules[NSStringFromClass([BookModuleManger class])];
 }
 
 @end

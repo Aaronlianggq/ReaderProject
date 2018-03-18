@@ -97,7 +97,7 @@
 		E450C90D205E526800A3A645 /* HZResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C90C205E526800A3A645 /* HZResponse.m */; };
 		E450C910205E754D00A3A645 /* HZModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C90F205E754D00A3A645 /* HZModule.m */; };
 		E450C913205E760600A3A645 /* HZModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C912205E760600A3A645 /* HZModuleManager.m */; };
-		E450C917205E7E1E00A3A645 /* BookModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C916205E7E1E00A3A645 /* BookModule.m */; };
+		E450C917205E7E1E00A3A645 /* BookModuleManger.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C916205E7E1E00A3A645 /* BookModuleManger.m */; };
 		E450C91B205E838E00A3A645 /* HZBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C91A205E838E00A3A645 /* HZBaseModel.m */; };
 		E450C920205E83CA00A3A645 /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C91F205E83CA00A3A645 /* BookModel.m */; };
 /* End PBXBuildFile section */
@@ -285,12 +285,13 @@
 		E450C90F205E754D00A3A645 /* HZModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZModule.m; sourceTree = "<group>"; };
 		E450C911205E760600A3A645 /* HZModuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZModuleManager.h; sourceTree = "<group>"; };
 		E450C912205E760600A3A645 /* HZModuleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZModuleManager.m; sourceTree = "<group>"; };
-		E450C915205E7E1E00A3A645 /* BookModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookModule.h; sourceTree = "<group>"; };
-		E450C916205E7E1E00A3A645 /* BookModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookModule.m; sourceTree = "<group>"; };
+		E450C915205E7E1E00A3A645 /* BookModuleManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookModuleManger.h; sourceTree = "<group>"; };
+		E450C916205E7E1E00A3A645 /* BookModuleManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookModuleManger.m; sourceTree = "<group>"; };
 		E450C919205E838E00A3A645 /* HZBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZBaseModel.h; sourceTree = "<group>"; };
 		E450C91A205E838E00A3A645 /* HZBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBaseModel.m; sourceTree = "<group>"; };
 		E450C91E205E83CA00A3A645 /* BookModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
 		E450C91F205E83CA00A3A645 /* BookModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookModel.m; sourceTree = "<group>"; };
+		E450C922205E88F900A3A645 /* HZDefineConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZDefineConfig.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,7 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				E450C8DE205E507B00A3A645 /* HZCore */,
-				E450C7C7205B9EDD00A3A645 /* HZBase */,
+				E450C7C7205B9EDD00A3A645 /* HZBaseBusiness */,
 				E450C7C9205B9EDD00A3A645 /* HZReaderBusiness */,
 				E450C7CA205B9EDD00A3A645 /* ThirdLib */,
 				E450C70E205A59E800A3A645 /* HZAppDelegate.h */,
@@ -340,14 +341,14 @@
 			path = BookReader;
 			sourceTree = "<group>";
 		};
-		E450C7C7205B9EDD00A3A645 /* HZBase */ = {
+		E450C7C7205B9EDD00A3A645 /* HZBaseBusiness */ = {
 			isa = PBXGroup;
 			children = (
 				E450C918205E836E00A3A645 /* BaseModel */,
 				E450C7CB205B9EF700A3A645 /* BaseViews */,
 				E450C7C8205B9EDD00A3A645 /* BaseControllers */,
 			);
-			path = HZBase;
+			path = HZBaseBusiness;
 			sourceTree = "<group>";
 		};
 		E450C7C8205B9EDD00A3A645 /* BaseControllers */ = {
@@ -705,12 +706,9 @@
 		E450C8DE205E507B00A3A645 /* HZCore */ = {
 			isa = PBXGroup;
 			children = (
-				E450C914205E7DCF00A3A645 /* BookModule */,
+				E450C923205E8A2400A3A645 /* Core */,
+				E450C914205E7DCF00A3A645 /* BookModuleManager */,
 				E450C8DF205E508900A3A645 /* Http */,
-				E450C90E205E754D00A3A645 /* HZModule.h */,
-				E450C90F205E754D00A3A645 /* HZModule.m */,
-				E450C911205E760600A3A645 /* HZModuleManager.h */,
-				E450C912205E760600A3A645 /* HZModuleManager.m */,
 			);
 			path = HZCore;
 			sourceTree = "<group>";
@@ -728,13 +726,13 @@
 			path = Http;
 			sourceTree = "<group>";
 		};
-		E450C914205E7DCF00A3A645 /* BookModule */ = {
+		E450C914205E7DCF00A3A645 /* BookModuleManager */ = {
 			isa = PBXGroup;
 			children = (
-				E450C915205E7E1E00A3A645 /* BookModule.h */,
-				E450C916205E7E1E00A3A645 /* BookModule.m */,
+				E450C915205E7E1E00A3A645 /* BookModuleManger.h */,
+				E450C916205E7E1E00A3A645 /* BookModuleManger.m */,
 			);
-			path = BookModule;
+			path = BookModuleManager;
 			sourceTree = "<group>";
 		};
 		E450C918205E836E00A3A645 /* BaseModel */ = {
@@ -761,6 +759,18 @@
 				E450C91F205E83CA00A3A645 /* BookModel.m */,
 			);
 			path = BookModel;
+			sourceTree = "<group>";
+		};
+		E450C923205E8A2400A3A645 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E450C922205E88F900A3A645 /* HZDefineConfig.h */,
+				E450C90E205E754D00A3A645 /* HZModule.h */,
+				E450C90F205E754D00A3A645 /* HZModule.m */,
+				E450C911205E760600A3A645 /* HZModuleManager.h */,
+				E450C912205E760600A3A645 /* HZModuleManager.m */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -915,7 +925,7 @@
 				E450C8E5205E510400A3A645 /* HZURLRequest.m in Sources */,
 				E450C889205BD2CF00A3A645 /* SDWebImagePrefetcher.m in Sources */,
 				E450C8E2205E50B600A3A645 /* HZHttpSender.m in Sources */,
-				E450C917205E7E1E00A3A645 /* BookModule.m in Sources */,
+				E450C917205E7E1E00A3A645 /* BookModuleManger.m in Sources */,
 				E450C895205BD2CF00A3A645 /* UIView+WebCacheOperation.m in Sources */,
 				E450C8D9205BD3C800A3A645 /* MJRefreshHeader.m in Sources */,
 				E450C7D7205B9FCB00A3A645 /* HZBaseViewController.m in Sources */,
