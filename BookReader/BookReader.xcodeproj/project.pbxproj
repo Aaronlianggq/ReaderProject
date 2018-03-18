@@ -98,6 +98,8 @@
 		E450C910205E754D00A3A645 /* HZModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C90F205E754D00A3A645 /* HZModule.m */; };
 		E450C913205E760600A3A645 /* HZModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C912205E760600A3A645 /* HZModuleManager.m */; };
 		E450C917205E7E1E00A3A645 /* BookModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C916205E7E1E00A3A645 /* BookModule.m */; };
+		E450C91B205E838E00A3A645 /* HZBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C91A205E838E00A3A645 /* HZBaseModel.m */; };
+		E450C920205E83CA00A3A645 /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C91F205E83CA00A3A645 /* BookModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -285,6 +287,10 @@
 		E450C912205E760600A3A645 /* HZModuleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZModuleManager.m; sourceTree = "<group>"; };
 		E450C915205E7E1E00A3A645 /* BookModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookModule.h; sourceTree = "<group>"; };
 		E450C916205E7E1E00A3A645 /* BookModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookModule.m; sourceTree = "<group>"; };
+		E450C919205E838E00A3A645 /* HZBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZBaseModel.h; sourceTree = "<group>"; };
+		E450C91A205E838E00A3A645 /* HZBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBaseModel.m; sourceTree = "<group>"; };
+		E450C91E205E83CA00A3A645 /* BookModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
+		E450C91F205E83CA00A3A645 /* BookModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +343,7 @@
 		E450C7C7205B9EDD00A3A645 /* HZBase */ = {
 			isa = PBXGroup;
 			children = (
+				E450C918205E836E00A3A645 /* BaseModel */,
 				E450C7CB205B9EF700A3A645 /* BaseViews */,
 				E450C7C8205B9EDD00A3A645 /* BaseControllers */,
 			);
@@ -357,6 +364,7 @@
 		E450C7C9205B9EDD00A3A645 /* HZReaderBusiness */ = {
 			isa = PBXGroup;
 			children = (
+				E450C91C205E83A500A3A645 /* Models */,
 				E450C7DD205BA11E00A3A645 /* Views */,
 				E450C7DC205BA11200A3A645 /* Controllers */,
 			);
@@ -729,6 +737,32 @@
 			path = BookModule;
 			sourceTree = "<group>";
 		};
+		E450C918205E836E00A3A645 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				E450C919205E838E00A3A645 /* HZBaseModel.h */,
+				E450C91A205E838E00A3A645 /* HZBaseModel.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		E450C91C205E83A500A3A645 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E450C91D205E83AE00A3A645 /* BookModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E450C91D205E83AE00A3A645 /* BookModel */ = {
+			isa = PBXGroup;
+			children = (
+				E450C91E205E83CA00A3A645 /* BookModel.h */,
+				E450C91F205E83CA00A3A645 /* BookModel.m */,
+			);
+			path = BookModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -833,6 +867,7 @@
 				E450C898205BD2CF00A3A645 /* UIButton+WebCache.m in Sources */,
 				E450C887205BD2CF00A3A645 /* SDWebImageCoderHelper.m in Sources */,
 				E450C71E205A59E800A3A645 /* main.m in Sources */,
+				E450C920205E83CA00A3A645 /* BookModel.m in Sources */,
 				E450C838205BD25E00A3A645 /* View+MASAdditions.m in Sources */,
 				E450C87E205BD2CF00A3A645 /* SDWebImageManager.m in Sources */,
 				E450C7DA205BA09400A3A645 /* HZBaseNavigationViewController.m in Sources */,
@@ -847,6 +882,7 @@
 				E450C893205BD2CF00A3A645 /* SDWebImageGIFCoder.m in Sources */,
 				E450C882205BD2CF00A3A645 /* SDWebImageCodersManager.m in Sources */,
 				E450C8CE205BD3C800A3A645 /* UIView+MJExtension.m in Sources */,
+				E450C91B205E838E00A3A645 /* HZBaseModel.m in Sources */,
 				E450C7EF205BA3D600A3A645 /* ClassificationController.m in Sources */,
 				E450C8DB205BD3C800A3A645 /* MJRefreshAutoFooter.m in Sources */,
 				E450C886205BD2CF00A3A645 /* UIImage+MultiFormat.m in Sources */,

@@ -11,6 +11,8 @@
 
 @property (nonatomic,copy) NSString *getBookInfoUrl;
 
+@property (nonatomic,copy) NSString *getUserShelfBooksUrl;
+
 @end
 
 @implementation BookModule
@@ -33,14 +35,34 @@
     return @"";
 }
 
-- (void)getBookInfoUrl:(NSString *)url
-              callBack:(HZTTPResponseBlock)callback {
+- (void)getBookInfoUrlCallBack:(void (^)(BookModel *model))callback {
     
-    
-    [HZHttpSender httpDataGet:url params:nil callBack:^(HZResponse *response) {
+    [HZHttpSender httpDataGet:self.getBookInfoUrl params:nil callBack:^(HZResponse *response) {
+        if(response.isError){
+            callback(nil);
+        }else{
+            NSDictionary *body = response.body;
+            BookModel *model = [[BookModel alloc] initWithDictionary:body];
+            callback(model);
+        }
+    }];
+}
+
+- (void)getUserShelfBooksCallBack:(void (^)(NSArray<BookModel *> *bookModels))callback {
+    [HZHttpSender httpDataGet:self.getUserShelfBooksUrl params:nil callBack:^(HZResponse *response) {
+        if(response.isError){
+            callback(nil);
+        }else{
+            NSArray *bodyArr = response.body;
+            NSMutableArray *bookModels = [NSMutableArray arrayWithCapacity:bodyArr.count];
+            for (NSDictionary *bookDic in bodyArr) {
+                BookModel *model = [[BookModel alloc] initWithDictionary:bookDic];
+                [bookModels addObject:model];
+            }
+            callback(bookModels);
+        }
         
     }];
-    
 }
 
 

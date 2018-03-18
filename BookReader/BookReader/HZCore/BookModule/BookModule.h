@@ -7,17 +7,20 @@
 //
 
 #import "HZModule.h"
+#import "BookModel.h"
 
 @interface BookModule : HZModule
 
-
 /**
  获取书籍信息
-
- @param callback 返回结果
+ @param callback    返回结果
  */
-- (void)getBookInfoUrl:(NSString *)url
-              callBack:(HZTTPResponseBlock)callback;
+- (void)getBookInfoUrlCallBack:(void (^)(BookModel *model))callback;
 
+/**
+ 获取当前用户书架的信息
+ @param callback    返回结果
+ */
+- (void)getUserShelfBooksCallBack:(void (^)(NSArray<BookModel *> *bookModels))callback;
 
 @end
