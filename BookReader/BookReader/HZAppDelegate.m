@@ -7,6 +7,7 @@
 //
 
 #import "HZAppDelegate.h"
+#import "HZCentralManager.h"
 #import "LGQSideViewController.h"
 #import "HZTabBarController.h"
 #import "PersonalController.h"
@@ -20,7 +21,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setupModules];
+    
     [self setViewRoot];
+    
     return YES;
 }
 
@@ -49,9 +53,14 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [hzManager tearDownAllModule];
 }
 
 #pragma mark --root
+- (void)setupModules {
+    [hzManager setUpAllModule];
+}
+
 - (void)setViewRoot {
     UIStoryboard *storyboardMain = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     LGQSideViewController *sideVc = [storyboardMain instantiateViewControllerWithIdentifier:@"storyboardSideViewControoler"];

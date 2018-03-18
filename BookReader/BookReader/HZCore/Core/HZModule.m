@@ -7,6 +7,7 @@
 //
 
 #import "HZModule.h"
+#import "HZCentralManager.h"
 
 @interface HZModule()
 @end
@@ -23,6 +24,15 @@
 {
     [self doesNotRecognizeSelector:@selector(init)];
     return nil;
+}
+
+- (instancetype)initWithCentralManager{
+    
+    id module = [hzManager managerForClass:[self class]];
+    if(module) return module;
+    
+    self = [super init];
+    return self;
 }
 
 

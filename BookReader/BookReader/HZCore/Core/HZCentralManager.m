@@ -22,26 +22,42 @@ void RegisterHZModule(Class moduleClass) {
 
 @interface HZCentralManager() {
     NSMutableDictionary *_modules;
+    BOOL _isSetuped;
 }
 @end
 
 @implementation HZCentralManager
-static HZCentralManager *instance;
+static HZCentralManager *_instance;
 + (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[HZCentralManager alloc] init];
+        _instance = [[self alloc] init];
     });
     
-    return instance;
+    return _instance;
 }
 
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
-    return [self sharedInstance];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [super allocWithZone:zone];
+    });
+    return _instance;
+}
+
+- (id)mutableCopy {
+    return _instance;
+}
+
++ (id)copyWithZone:(struct _NSZone *)zone  {
+    return _instance;
+}
++ (id)mutableCopyWithZone:(struct _NSZone *)zone {
+    return _instance;
 }
 
 -(instancetype)copy {
-    return [HZCentralManager sharedInstance];
+    return _instance;
 }
 
 - (instancetype)init {
@@ -55,25 +71,34 @@ static HZCentralManager *instance;
 #pragma mark - setUp
 
 - (void)setUpAllModule {
-    [self p_setupManagers];
+    @synchronized(self){
+        if(!_isSetuped)
+            [self p_setupManagers];
+        
+        _isSetuped = YES;
+    }
 }
 
 - (void)p_setupManagers {
     
     [ModuleClassSet enumerateObjectsUsingBlock:^(Class clzz, BOOL *stop) {
-        HZModule *module = [[clzz alloc] init];
+        HZModule *module = [[clzz alloc] initWithCentralManager];
         _modules[NSStringFromClass(clzz)] = module;
     }];
     
     [_modules.allValues enumerateObjectsUsingBlock:^(HZModule *module, NSUInteger idx, BOOL *stop) {
         [module setupWithContainer];
     }];
+    
 }
 
 #pragma mark - tearDown
 
 -(void)tearDownAllModule {
-    [self p_teardownManagers];
+    @synchronized(self){
+        [self p_teardownManagers];
+        _isSetuped = NO;
+    }
 }
 
 - (void)p_teardownManagers {
@@ -85,9 +110,14 @@ static HZCentralManager *instance;
     [_modules removeAllObjects];
 }
 
+- (id)managerForClass:(Class)managerClass {
+    
+    return _modules[NSStringFromClass(managerClass)];
+}
+
 #pragma mark --modules
 - (HZBookModuleManger *)bookModule {
-    return _modules[NSStringFromClass([HZBookModuleManger class])];
+    return [self managerForClass:[HZBookModuleManger class]];
 }
 
 @end

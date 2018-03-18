@@ -22,12 +22,18 @@
     RegisterHZModule([self class]);
 }
 
+- (instancetype)initWithCentralManager {
+    self = [super initWithCentralManager];
+    if(self){
+        _hostDic = [[NSMutableDictionary alloc] init];
+    }
+    return self;
+}
 
 - (void)setupWithContainer {
     if(_hostDic){
         _hostDic = [[NSMutableDictionary alloc] init];
     }
-    
 #ifdef DEBUG
     [self setHttpHostDebug];
 #else
@@ -42,6 +48,7 @@
 
 #pragma mark public
 - (void)changeHttpHostWithScheme:(HZHttpServeSchemeType)schemeType {
+    
     switch (schemeType) {
         case HZHttpServeSchemeTypeDebug:
             [self setHttpHostDebug];
@@ -54,15 +61,21 @@
 }
 
 - (NSString *)getCurrentHttpServerHost {
-    return nil;
+    @synchronized(self){
+        return _hostDic[HZHttpHostKey];
+    }
 }
 
 #pragma mark private
 - (void)setHttpHostDebug {
-    
+    @synchronized(self){
+        [_hostDic setObject:@"https://hz.com/" forKey:HZHttpHostKey];
+    }
 }
 
 - (void)setHttpHostRelease {
-    
+    @synchronized(self){
+        [_hostDic setObject:@"https://hz.test.com/" forKey:HZHttpHostKey];
+    }
 }
 @end
