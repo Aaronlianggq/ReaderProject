@@ -18,9 +18,18 @@ typedef enum : NSInteger
 
 @interface HZServerAddressManager : HZModule
 
+/**
+ 获取当前开发环境域名值
+
+ @return host
+ */
 - (NSString *)getCurrentHttpServerHost;
 
 
+/**
+ 替换开发环境
+ @param schemeType 模块
+ */
 - (void)changeHttpHostWithScheme:(HZHttpServeSchemeType)schemeType;
 
 @end

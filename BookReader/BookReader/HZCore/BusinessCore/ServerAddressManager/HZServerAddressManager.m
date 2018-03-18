@@ -48,7 +48,7 @@
 
 #pragma mark public
 - (void)changeHttpHostWithScheme:(HZHttpServeSchemeType)schemeType {
-    
+#ifdef DEBUG
     switch (schemeType) {
         case HZHttpServeSchemeTypeDebug:
             [self setHttpHostDebug];
@@ -58,13 +58,13 @@
             [self setHttpHostRelease];
             break;
     }
+#endif
 }
 
 - (NSString *)getCurrentHttpServerHost {
     return _hostDic[HZHttpHostKey];
 }
 
-#pragma /Users/lianggq/Desktop/readerProject/ReaderProject/BookReader/BookReader/HZCore/Core/HZServerAddressManager.h/Users/lianggq/Desktop/readerProject/ReaderProject/BookReader/BookReader/HZCore/Core/HZServerAddressManager.mmark private
 - (void)setHttpHostDebug {
     @synchronized(self){
         [_hostDic setObject:@"https://hz.test.com/" forKey:HZHttpHostKey];
