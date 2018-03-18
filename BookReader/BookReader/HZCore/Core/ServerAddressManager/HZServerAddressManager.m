@@ -64,7 +64,7 @@
     return _hostDic[HZHttpHostKey];
 }
 
-#pragma mark private
+#pragma /Users/lianggq/Desktop/readerProject/ReaderProject/BookReader/BookReader/HZCore/Core/HZServerAddressManager.h/Users/lianggq/Desktop/readerProject/ReaderProject/BookReader/BookReader/HZCore/Core/HZServerAddressManager.mmark private
 - (void)setHttpHostDebug {
     @synchronized(self){
         [_hostDic setObject:@"https://hz.test.com/" forKey:HZHttpHostKey];

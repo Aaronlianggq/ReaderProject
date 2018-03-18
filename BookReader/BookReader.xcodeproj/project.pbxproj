@@ -344,6 +344,15 @@
 			path = Categorys;
 			sourceTree = "<group>";
 		};
+		E445AFB3205ED77C004DEE85 /* ServerAddressManager */ = {
+			isa = PBXGroup;
+			children = (
+				E450C926205EB83D00A3A645 /* HZServerAddressManager.h */,
+				E450C927205EB83D00A3A645 /* HZServerAddressManager.m */,
+			);
+			path = ServerAddressManager;
+			sourceTree = "<group>";
+		};
 		E450C702205A59E800A3A645 = {
 			isa = PBXGroup;
 			children = (
@@ -746,7 +755,6 @@
 			children = (
 				E450C924205EB78C00A3A645 /* HZDefineConfig */,
 				E450C923205E8A2400A3A645 /* Core */,
-				E450C914205E7DCF00A3A645 /* BookModuleManager */,
 				E445AF8E205ED1A1004DEE85 /* Categorys */,
 				E450C8DF205E508900A3A645 /* Http */,
 			);
@@ -804,12 +812,12 @@
 		E450C923205E8A2400A3A645 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E445AFB3205ED77C004DEE85 /* ServerAddressManager */,
+				E450C914205E7DCF00A3A645 /* BookModuleManager */,
 				E450C90E205E754D00A3A645 /* HZModule.h */,
 				E450C90F205E754D00A3A645 /* HZModule.m */,
 				E450C911205E760600A3A645 /* HZCentralManager.h */,
 				E450C912205E760600A3A645 /* HZCentralManager.m */,
-				E450C926205EB83D00A3A645 /* HZServerAddressManager.h */,
-				E450C927205EB83D00A3A645 /* HZServerAddressManager.m */,
 				E445AFB0205ED402004DEE85 /* NSObject+Swizzle.h */,
 				E445AFB1205ED402004DEE85 /* NSObject+Swizzle.m */,
 			);
