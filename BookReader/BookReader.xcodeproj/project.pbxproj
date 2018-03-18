@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E445AFA6205ED1A1004DEE85 /* NSString+RectSize.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF96205ED1A1004DEE85 /* NSString+RectSize.m */; };
+		E445AFA9205ED1A1004DEE85 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF9B205ED1A1004DEE85 /* UIImage+Utilities.m */; };
+		E445AFAB205ED1A1004DEE85 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF9E205ED1A1004DEE85 /* NSString+MD5.m */; };
+		E445AFAD205ED1A1004DEE85 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AFA0205ED1A1004DEE85 /* NSString+UUID.m */; };
+		E445AFAF205ED1A1004DEE85 /* NSString+Verification.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AFA3205ED1A1004DEE85 /* NSString+Verification.m */; };
+		E445AFB2205ED402004DEE85 /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AFB1205ED402004DEE85 /* NSObject+Swizzle.m */; };
 		E450C710205A59E800A3A645 /* HZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C70F205A59E800A3A645 /* HZAppDelegate.m */; };
 		E450C716205A59E800A3A645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E450C714205A59E800A3A645 /* Main.storyboard */; };
 		E450C718205A59E800A3A645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E450C717205A59E800A3A645 /* Assets.xcassets */; };
@@ -104,6 +110,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E445AF8F205ED1A1004DEE85 /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utilities.h"; sourceTree = "<group>"; };
+		E445AF91205ED1A1004DEE85 /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
+		E445AF93205ED1A1004DEE85 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		E445AF96205ED1A1004DEE85 /* NSString+RectSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RectSize.m"; sourceTree = "<group>"; };
+		E445AF99205ED1A1004DEE85 /* NSString+Verification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Verification.h"; sourceTree = "<group>"; };
+		E445AF9B205ED1A1004DEE85 /* UIImage+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utilities.m"; sourceTree = "<group>"; };
+		E445AF9E205ED1A1004DEE85 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		E445AFA0205ED1A1004DEE85 /* NSString+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UUID.m"; sourceTree = "<group>"; };
+		E445AFA3205ED1A1004DEE85 /* NSString+Verification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Verification.m"; sourceTree = "<group>"; };
+		E445AFA4205ED1A1004DEE85 /* NSString+RectSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RectSize.h"; sourceTree = "<group>"; };
+		E445AFB0205ED402004DEE85 /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		E445AFB1205ED402004DEE85 /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
 		E450C70B205A59E800A3A645 /* BookReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E450C70E205A59E800A3A645 /* HZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZAppDelegate.h; sourceTree = "<group>"; };
 		E450C70F205A59E800A3A645 /* HZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZAppDelegate.m; sourceTree = "<group>"; };
@@ -309,6 +327,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E445AF8E205ED1A1004DEE85 /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				E445AF8F205ED1A1004DEE85 /* UIImage+Utilities.h */,
+				E445AF9B205ED1A1004DEE85 /* UIImage+Utilities.m */,
+				E445AF91205ED1A1004DEE85 /* NSString+UUID.h */,
+				E445AFA0205ED1A1004DEE85 /* NSString+UUID.m */,
+				E445AF93205ED1A1004DEE85 /* NSString+MD5.h */,
+				E445AF9E205ED1A1004DEE85 /* NSString+MD5.m */,
+				E445AFA4205ED1A1004DEE85 /* NSString+RectSize.h */,
+				E445AF96205ED1A1004DEE85 /* NSString+RectSize.m */,
+				E445AF99205ED1A1004DEE85 /* NSString+Verification.h */,
+				E445AFA3205ED1A1004DEE85 /* NSString+Verification.m */,
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
 		E450C702205A59E800A3A645 = {
 			isa = PBXGroup;
 			children = (
@@ -712,6 +747,7 @@
 				E450C924205EB78C00A3A645 /* HZDefineConfig */,
 				E450C923205E8A2400A3A645 /* Core */,
 				E450C914205E7DCF00A3A645 /* BookModuleManager */,
+				E445AF8E205ED1A1004DEE85 /* Categorys */,
 				E450C8DF205E508900A3A645 /* Http */,
 			);
 			path = HZCore;
@@ -774,6 +810,8 @@
 				E450C912205E760600A3A645 /* HZCentralManager.m */,
 				E450C926205EB83D00A3A645 /* HZServerAddressManager.h */,
 				E450C927205EB83D00A3A645 /* HZServerAddressManager.m */,
+				E445AFB0205ED402004DEE85 /* NSObject+Swizzle.h */,
+				E445AFB1205ED402004DEE85 /* NSObject+Swizzle.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -863,13 +901,16 @@
 				E450C894205BD2CF00A3A645 /* SDImageCacheConfig.m in Sources */,
 				E450C8CD205BD3C800A3A645 /* NSBundle+MJRefresh.m in Sources */,
 				E450C897205BD2CF00A3A645 /* SDWebImageImageIOCoder.m in Sources */,
+				E445AFAF205ED1A1004DEE85 /* NSString+Verification.m in Sources */,
 				E450C87F205BD2CF00A3A645 /* UIImageView+HighlightedWebCache.m in Sources */,
+				E445AFAD205ED1A1004DEE85 /* NSString+UUID.m in Sources */,
 				E450C83A205BD25E00A3A645 /* MASViewConstraint.m in Sources */,
 				E450C87D205BD2CF00A3A645 /* MKAnnotationView+WebCache.m in Sources */,
 				E450C810205BD1F200A3A645 /* AFURLSessionManager.m in Sources */,
 				E450C834205BD25E00A3A645 /* MASCompositeConstraint.m in Sources */,
 				E450C8DC205BD3C800A3A645 /* MJRefreshComponent.m in Sources */,
 				E450C837205BD25E00A3A645 /* NSArray+MASAdditions.m in Sources */,
+				E445AFA9205ED1A1004DEE85 /* UIImage+Utilities.m in Sources */,
 				E450C8C9205BD3C800A3A645 /* UIScrollView+MJRefresh.m in Sources */,
 				E450C7F5205BA53F00A3A645 /* HZTabBarController.m in Sources */,
 				E450C8CA205BD3C800A3A645 /* MJRefreshConst.m in Sources */,
@@ -896,6 +937,7 @@
 				E450C87E205BD2CF00A3A645 /* SDWebImageManager.m in Sources */,
 				E450C7DA205BA09400A3A645 /* HZBaseNavigationViewController.m in Sources */,
 				E450C812205BD1F200A3A645 /* AFNetworkReachabilityManager.m in Sources */,
+				E445AFAB205ED1A1004DEE85 /* NSString+MD5.m in Sources */,
 				E450C885205BD2CF00A3A645 /* UIImage+GIF.m in Sources */,
 				E450C88A205BD2CF00A3A645 /* SDWebImageCoder.m in Sources */,
 				E450C80E205BD1F200A3A645 /* AFURLResponseSerialization.m in Sources */,
@@ -919,6 +961,7 @@
 				E450C7E9205BA38100A3A645 /* BookShelfController.m in Sources */,
 				E450C8D5205BD3C800A3A645 /* MJRefreshNormalHeader.m in Sources */,
 				E450C7D4205B9FB700A3A645 /* HZBaseCollectionView.m in Sources */,
+				E445AFB2205ED402004DEE85 /* NSObject+Swizzle.m in Sources */,
 				E450C8D6205BD3C800A3A645 /* MJRefreshStateHeader.m in Sources */,
 				E450C892205BD2CF00A3A645 /* NSImage+WebCache.m in Sources */,
 				E450C7F2205BA3F100A3A645 /* DisCoveryController.m in Sources */,
@@ -939,6 +982,7 @@
 				E450C8CF205BD3C800A3A645 /* MJRefreshBackGifFooter.m in Sources */,
 				E450C8E5205E510400A3A645 /* HZURLRequest.m in Sources */,
 				E450C889205BD2CF00A3A645 /* SDWebImagePrefetcher.m in Sources */,
+				E445AFA6205ED1A1004DEE85 /* NSString+RectSize.m in Sources */,
 				E450C8E2205E50B600A3A645 /* HZHttpSender.m in Sources */,
 				E450C917205E7E1E00A3A645 /* HZBookModuleManger.m in Sources */,
 				E450C895205BD2CF00A3A645 /* UIView+WebCacheOperation.m in Sources */,
