@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface HZBaseModel : NSObject
 
 - (instancetype)initWithDictionary:(NSDictionary *)modelData;

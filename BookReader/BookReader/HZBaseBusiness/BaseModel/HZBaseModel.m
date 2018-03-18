@@ -7,6 +7,7 @@
 //
 
 #import "HZBaseModel.h"
+#import "MJExtension.h"
 
 @implementation HZBaseModel
 
@@ -14,13 +15,13 @@
     
     self = [super init];
     if(self){
-        
+        [self mj_setKeyValues:modelData];
     }
     return self;
 }
 
 - (NSDictionary *)toDictionary {
-    return nil;
+    return [self mj_keyValues];
 }
 
 @end
