@@ -54,11 +54,7 @@
             callback(nil);
         }else{
             NSArray *bodyArr = response.body;
-            NSMutableArray *bookModels = [NSMutableArray arrayWithCapacity:bodyArr.count];
-            for (NSDictionary *bookDic in bodyArr) {
-                BookModel *model = [[BookModel alloc] initWithDictionary:bookDic];
-                [bookModels addObject:model];
-            }
+            NSArray *bookModels = [BookModel getModelsWithArray:bodyArr];
             callback(bookModels);
         }
         

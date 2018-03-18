@@ -24,4 +24,8 @@
     return [self mj_keyValues];
 }
 
++ (NSMutableArray <HZBaseModel *> *)getModelsWithArray:(NSArray *)modelDatas {
+    return [self mj_objectArrayWithKeyValuesArray:modelDatas];
+}
+
 @end

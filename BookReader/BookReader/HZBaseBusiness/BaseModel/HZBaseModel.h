@@ -15,5 +15,6 @@
 
 - (NSDictionary *)toDictionary;
 
++ (NSMutableArray <HZBaseModel *> *)getModelsWithArray:(NSArray *)modelDatas;
 
 @end
