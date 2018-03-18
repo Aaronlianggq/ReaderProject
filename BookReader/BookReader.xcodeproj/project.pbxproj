@@ -92,6 +92,9 @@
 		E450C8DA205BD3C800A3A645 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C8C3205BD3C800A3A645 /* MJRefreshBackFooter.m */; };
 		E450C8DB205BD3C800A3A645 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C8C4205BD3C800A3A645 /* MJRefreshAutoFooter.m */; };
 		E450C8DC205BD3C800A3A645 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C8C6205BD3C800A3A645 /* MJRefreshComponent.m */; };
+		E450C8E2205E50B600A3A645 /* HZHttpSender.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C8E1205E50B500A3A645 /* HZHttpSender.m */; };
+		E450C8E5205E510400A3A645 /* HZURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C8E4205E510400A3A645 /* HZURLRequest.m */; };
+		E450C90D205E526800A3A645 /* HZResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C90C205E526800A3A645 /* HZResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -267,6 +270,12 @@
 		E450C8C6205BD3C800A3A645 /* MJRefreshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshComponent.m; sourceTree = "<group>"; };
 		E450C8C7205BD3C800A3A645 /* MJRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooter.h; sourceTree = "<group>"; };
 		E450C8C8205BD3C800A3A645 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
+		E450C8E0205E50B500A3A645 /* HZHttpSender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZHttpSender.h; sourceTree = "<group>"; };
+		E450C8E1205E50B500A3A645 /* HZHttpSender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZHttpSender.m; sourceTree = "<group>"; };
+		E450C8E3205E510400A3A645 /* HZURLRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZURLRequest.h; sourceTree = "<group>"; };
+		E450C8E4205E510400A3A645 /* HZURLRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZURLRequest.m; sourceTree = "<group>"; };
+		E450C90B205E526800A3A645 /* HZResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZResponse.h; sourceTree = "<group>"; };
+		E450C90C205E526800A3A645 /* HZResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +310,7 @@
 		E450C70D205A59E800A3A645 /* BookReader */ = {
 			isa = PBXGroup;
 			children = (
+				E450C8DE205E507B00A3A645 /* HZCore */,
 				E450C7C7205B9EDD00A3A645 /* HZBase */,
 				E450C7C9205B9EDD00A3A645 /* HZReaderBusiness */,
 				E450C7CA205B9EDD00A3A645 /* ThirdLib */,
@@ -675,6 +685,27 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		E450C8DE205E507B00A3A645 /* HZCore */ = {
+			isa = PBXGroup;
+			children = (
+				E450C8DF205E508900A3A645 /* HZHttp */,
+			);
+			path = HZCore;
+			sourceTree = "<group>";
+		};
+		E450C8DF205E508900A3A645 /* HZHttp */ = {
+			isa = PBXGroup;
+			children = (
+				E450C8E0205E50B500A3A645 /* HZHttpSender.h */,
+				E450C8E1205E50B500A3A645 /* HZHttpSender.m */,
+				E450C8E3205E510400A3A645 /* HZURLRequest.h */,
+				E450C8E4205E510400A3A645 /* HZURLRequest.m */,
+				E450C90B205E526800A3A645 /* HZResponse.h */,
+				E450C90C205E526800A3A645 /* HZResponse.m */,
+			);
+			path = HZHttp;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -762,6 +793,7 @@
 				E450C8C9205BD3C800A3A645 /* UIScrollView+MJRefresh.m in Sources */,
 				E450C7F5205BA53F00A3A645 /* HZTabBarController.m in Sources */,
 				E450C8CA205BD3C800A3A645 /* MJRefreshConst.m in Sources */,
+				E450C90D205E526800A3A645 /* HZResponse.m in Sources */,
 				E450C88D205BD2CF00A3A645 /* SDImageCache.m in Sources */,
 				E450C884205BD2CF00A3A645 /* SDWebImageDownloader.m in Sources */,
 				E450C8DA205BD3C800A3A645 /* MJRefreshBackFooter.m in Sources */,
@@ -820,7 +852,9 @@
 				E450C8D4205BD3C800A3A645 /* MJRefreshAutoNormalFooter.m in Sources */,
 				E450C8D1205BD3C800A3A645 /* MJRefreshBackNormalFooter.m in Sources */,
 				E450C8CF205BD3C800A3A645 /* MJRefreshBackGifFooter.m in Sources */,
+				E450C8E5205E510400A3A645 /* HZURLRequest.m in Sources */,
 				E450C889205BD2CF00A3A645 /* SDWebImagePrefetcher.m in Sources */,
+				E450C8E2205E50B600A3A645 /* HZHttpSender.m in Sources */,
 				E450C895205BD2CF00A3A645 /* UIView+WebCacheOperation.m in Sources */,
 				E450C8D9205BD3C800A3A645 /* MJRefreshHeader.m in Sources */,
 				E450C7D7205B9FCB00A3A645 /* HZBaseViewController.m in Sources */,
