@@ -7,7 +7,6 @@
 //
 
 #import "HZModule.h"
-#import "BookModel.h"
 
 @interface HZBookModuleManger : HZModule
 

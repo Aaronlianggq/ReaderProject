@@ -15,6 +15,8 @@
     NSMutableArray*_httpRequestTasks ;
 }
 
++ (instancetype)requestChannel;
+
 #pragma mark -- httpRequest Method  目前只设置GET和POST
 /**
  接口请求 POST

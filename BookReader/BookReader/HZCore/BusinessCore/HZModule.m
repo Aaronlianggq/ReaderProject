@@ -20,7 +20,7 @@
     BOOL isToProtocal = [aclass conformsToProtocol:@protocol(HZModuleModelProtocol)];
 #ifdef DEBUG
     if(!isToProtocal){
-        NSAssert(NO, @"%@ is not to HZModuleModelProtocol",NSStringFromClass(aclass));
+        NSAssert(NO, @"[%@ isClassToModuleProtocal] error, %@ is not to HZModuleModelProtocol",NSStringFromClass([self class]),NSStringFromClass(aclass));
     }
 #endif
     return isToProtocal;
@@ -43,6 +43,15 @@
     if(module) return module;
     
     self = [super init];
+    if(self){
+        HZHttpRequestChannel *channel = [HZHttpRequestChannel requestChannel];
+        self->requestChannel = channel;
+        
+        moduleQueue = dispatch_queue_create([NSString stringWithFormat:@"queue.module.%@", NSStringFromClass([self class])].UTF8String, NULL);
+        queueTag = &queueTag;
+        dispatch_queue_set_specific(moduleQueue, queueTag, queueTag, NULL);
+    }
+    
     return self;
 }
 

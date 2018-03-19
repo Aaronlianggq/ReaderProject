@@ -18,6 +18,11 @@
 
 @implementation HZHttpRequestChannel
 
++ (instancetype)requestChannel {
+    
+    return [[self alloc] init];
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {

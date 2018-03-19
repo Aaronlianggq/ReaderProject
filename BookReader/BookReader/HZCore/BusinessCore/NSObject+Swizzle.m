@@ -1,9 +1,9 @@
 //
 //  NSObject+Swizzle.m
-//  SkySea
+//  BookReader
 //
-//  Created by whj on 16/1/6.
-//  Copyright © 2016年 skysea. All rights reserved.
+//  Created by lianggq on 2018/3/19.
+//  Copyright © 2018年 liang. All rights reserved.
 //
 
 #import "NSObject+Swizzle.h"

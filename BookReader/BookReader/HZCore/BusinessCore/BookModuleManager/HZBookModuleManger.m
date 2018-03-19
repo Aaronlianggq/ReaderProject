@@ -31,12 +31,17 @@
 
 #pragma mark --get
 - (NSString *)getBookInfoUrl {
-    
-    return @"";
+    if(!_getBookInfoUrl){
+        _getBookInfoUrl = [HZ_Current_Host stringByAppendingString:@"book.json"];
+    }
+    return _getBookInfoUrl;
 }
 
 - (NSString *)getUserShelfBooksUrl {
-    return @"";
+    if(!_getUserShelfBooksUrl){
+        _getUserShelfBooksUrl = [HZ_Current_Host stringByAppendingString:@"user/bookShelf.json"];
+    }
+    return _getUserShelfBooksUrl;
 }
 
 #pragma mark publick
@@ -46,17 +51,23 @@
         return;
     }
     
-//    [HZHttpSender httpDataGet:self.getBookInfoUrl params:nil callBack:^(HZResponse *response) {
-//        if(response.isError){
-//            callback(nil);
-//        }else{
-//            NSDictionary *body = response.body;
-//            NSObject <HZModuleModelProtocol> *model = [[classModel alloc] init];
-//
-//            [model setParamsWithDictionary:body];
-//            callback(model);
-//        }
-//    }];
+    [self->requestChannel get:self.getBookInfoUrl
+                       params:nil
+                     callBack:^(HZResponse *response) {
+                         
+        if(response.isError){
+            callback(nil);
+        }else{
+            NSDictionary *body = response.body;
+            NSObject <HZModuleModelProtocol> *model = [[classModel alloc] init];
+
+            [model setParamsWithDictionary:body];
+            
+            mainThread(^{
+                callback(model);
+            });
+        }
+    }];
 }
 
 - (void)getUserShelfBooksCallBack:(void (^)(NSArray<NSObject<HZModuleModelProtocol> *> *bookModels))callback
@@ -65,16 +76,20 @@
         return;
     }
     
-//    [HZHttpSender httpDataGet:self.getUserShelfBooksUrl params:nil callBack:^(HZResponse *response) {
-//        if(response.isError){
-//            callback(nil);
-//        }else{
-//            NSArray *bodyArr = response.body;
-//            NSArray *bookModels = [classModel getModelsWithArray:bodyArr];
-//            callback(bookModels);
-//        }
-//
-//    }];
+    [self->requestChannel get:self.getBookInfoUrl
+                       params:nil
+                     callBack:^(HZResponse *response) {
+        if(response.isError){
+            callback(nil);
+        }else{
+            NSArray *bodyArr = response.body;
+            NSArray *bookModels = [classModel getModelsWithArray:bodyArr];
+            mainThread(^{
+                callback(bookModels);
+            });
+        }
+
+    }];
 }
 
 

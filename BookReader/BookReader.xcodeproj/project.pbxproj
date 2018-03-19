@@ -838,11 +838,11 @@
 		E450C8DE205E507B00A3A645 /* HZCore */ = {
 			isa = PBXGroup;
 			children = (
-				E4340F37205F90E200B1413A /* GCDSafetyBlock */,
 				E450C924205EB78C00A3A645 /* HZDefineConfig */,
 				E450C923205E8A2400A3A645 /* BusinessCore */,
 				E445AF8E205ED1A1004DEE85 /* Categorys */,
 				E450C8DF205E508900A3A645 /* Http */,
+				E4340F37205F90E200B1413A /* GCDSafetyBlock */,
 			);
 			path = HZCore;
 			sourceTree = "<group>";

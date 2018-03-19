@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
-#import "HZHttpSender.h"
+#import "HZHttpRequestChannel.h"
 #import "HZModuleModelProtocol.h"
+#import "HZGCDSafetyBlock.h"
 
 #define HZ_Current_Host     [HZModule getHostString]
 
@@ -49,7 +50,17 @@ OBJC_EXPORT void RegisterHZModule(Class moduleClass);
 /**
  模块管理
  */
-@interface HZModule : NSObject <HZModuleLifecycle>
+@interface HZModule : NSObject <HZModuleLifecycle> {
+@protected
+    
+    HZHttpRequestChannel * requestChannel;
+    
+    /**
+     *  GCD 队列
+     */
+    dispatch_queue_t moduleQueue;
+    void *queueTag;
+}
 
 - (BOOL)isClassToModuleProtocal:(Class)aclass;
 
