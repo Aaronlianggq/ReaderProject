@@ -6,7 +6,7 @@
 //  Copyright © 2018年 liang. All rights reserved.
 //
 
-#import "HZResponse.h"
+#import "HZHttpSender.h"
 
 @implementation HZResponse
 

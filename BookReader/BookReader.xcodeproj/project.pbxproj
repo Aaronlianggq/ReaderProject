@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4340F36205F8E5400B1413A /* HZHttpRequestChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4340F35205F8E5400B1413A /* HZHttpRequestChannel.m */; };
+		E4340F3A205F914D00B1413A /* HZGCDSafetyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = E4340F39205F914D00B1413A /* HZGCDSafetyBlock.m */; };
 		E445AFA6205ED1A1004DEE85 /* NSString+RectSize.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF96205ED1A1004DEE85 /* NSString+RectSize.m */; };
 		E445AFA9205ED1A1004DEE85 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF9B205ED1A1004DEE85 /* UIImage+Utilities.m */; };
 		E445AFAB205ED1A1004DEE85 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF9E205ED1A1004DEE85 /* NSString+MD5.m */; };
@@ -120,6 +122,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E4340F34205F8E5400B1413A /* HZHttpRequestChannel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZHttpRequestChannel.h; sourceTree = "<group>"; };
+		E4340F35205F8E5400B1413A /* HZHttpRequestChannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZHttpRequestChannel.m; sourceTree = "<group>"; };
+		E4340F38205F914D00B1413A /* HZGCDSafetyBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZGCDSafetyBlock.h; sourceTree = "<group>"; };
+		E4340F39205F914D00B1413A /* HZGCDSafetyBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZGCDSafetyBlock.m; sourceTree = "<group>"; };
 		E445AF8F205ED1A1004DEE85 /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utilities.h"; sourceTree = "<group>"; };
 		E445AF91205ED1A1004DEE85 /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
 		E445AF93205ED1A1004DEE85 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
@@ -359,6 +365,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E4340F33205F89C000B1413A /* HZHttpRequestChannel */ = {
+			isa = PBXGroup;
+			children = (
+				E4340F34205F8E5400B1413A /* HZHttpRequestChannel.h */,
+				E4340F35205F8E5400B1413A /* HZHttpRequestChannel.m */,
+			);
+			path = HZHttpRequestChannel;
+			sourceTree = "<group>";
+		};
+		E4340F37205F90E200B1413A /* GCDSafetyBlock */ = {
+			isa = PBXGroup;
+			children = (
+				E4340F38205F914D00B1413A /* HZGCDSafetyBlock.h */,
+				E4340F39205F914D00B1413A /* HZGCDSafetyBlock.m */,
+			);
+			path = GCDSafetyBlock;
+			sourceTree = "<group>";
+		};
 		E445AF8E205ED1A1004DEE85 /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
@@ -814,6 +838,7 @@
 		E450C8DE205E507B00A3A645 /* HZCore */ = {
 			isa = PBXGroup;
 			children = (
+				E4340F37205F90E200B1413A /* GCDSafetyBlock */,
 				E450C924205EB78C00A3A645 /* HZDefineConfig */,
 				E450C923205E8A2400A3A645 /* BusinessCore */,
 				E445AF8E205ED1A1004DEE85 /* Categorys */,
@@ -825,6 +850,7 @@
 		E450C8DF205E508900A3A645 /* Http */ = {
 			isa = PBXGroup;
 			children = (
+				E4340F33205F89C000B1413A /* HZHttpRequestChannel */,
 				E450C8E0205E50B500A3A645 /* HZHttpSender.h */,
 				E450C8E1205E50B500A3A645 /* HZHttpSender.m */,
 				E450C8E3205E510400A3A645 /* HZURLRequest.h */,
@@ -998,6 +1024,7 @@
 				E450C7D1205B9F4200A3A645 /* HZBaseTableView.m in Sources */,
 				E450C891205BD2CF00A3A645 /* UIImageView+WebCache.m in Sources */,
 				E450C88C205BD2CF00A3A645 /* SDAnimatedImageRep.m in Sources */,
+				E4340F3A205F914D00B1413A /* HZGCDSafetyBlock.m in Sources */,
 				E450C888205BD2CF00A3A645 /* SDWebImageCompat.m in Sources */,
 				E450C835205BD25E00A3A645 /* MASConstraintMaker.m in Sources */,
 				E450C898205BD2CF00A3A645 /* UIButton+WebCache.m in Sources */,
@@ -1013,6 +1040,7 @@
 				E450C88A205BD2CF00A3A645 /* SDWebImageCoder.m in Sources */,
 				E450C80E205BD1F200A3A645 /* AFURLResponseSerialization.m in Sources */,
 				E450C87C205BD2CF00A3A645 /* UIImage+WebP.m in Sources */,
+				E4340F36205F8E5400B1413A /* HZHttpRequestChannel.m in Sources */,
 				E450C896205BD2CF00A3A645 /* UIView+WebCache.m in Sources */,
 				E445AFD0205ED90F004DEE85 /* NSObject+MJProperty.m in Sources */,
 				E450C881205BD2CF00A3A645 /* UIImage+ForceDecode.m in Sources */,

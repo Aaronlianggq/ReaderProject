@@ -15,6 +15,8 @@ typedef enum : NSInteger
     
 }HZResponseStatusCode;
 
+@class HZResponse;
+typedef void(^HZTTPResponseBlock)(HZResponse *response);
 
 @interface HZResponse : NSObject
 
@@ -29,3 +31,6 @@ typedef enum : NSInteger
 @property (nonatomic,readonly, getter=isError) BOOL isError;
 
 @end
+
+
+

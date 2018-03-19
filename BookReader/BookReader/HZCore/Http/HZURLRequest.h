@@ -15,7 +15,7 @@
 
  @param timeout 时间
  */
-+ (void)setTimeout:(float)timeout;
++ (void)setTimeout:(NSTimeInterval)timeout;
 
 
 /**

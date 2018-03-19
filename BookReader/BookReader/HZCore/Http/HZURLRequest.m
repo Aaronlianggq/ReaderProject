@@ -7,13 +7,12 @@
 //
 
 #import "HZURLRequest.h"
-#import "HZHttpSender.h"
 
-static float hzTimeout = 10.f;
+static NSTimeInterval hzTimeout = 10.f;
 
 @implementation HZURLRequest
 
-+ (void)setTimeout:(float)timeout {
++ (void)setTimeout:(NSTimeInterval)timeout {
     hzTimeout = timeout;
 }
 
@@ -43,7 +42,6 @@ static float hzTimeout = 10.f;
 
     return request;
 }
-
 
 + (HZURLRequest *)urlRequestForPost:(NSString *)path
                           parameters:(NSDictionary *)params
@@ -88,24 +86,13 @@ static float hzTimeout = 10.f;
 @implementation NSMutableURLRequest(HZCustom)
 
 - (void)setDefaultRequest {
-    [self addAFHttpFeilds];
-    [self addAFHttpFeilds];
-    self.timeoutInterval = hzTimeout;
+    [self addDefaultHttpFeild];
 }
 
 #pragma mark private
 - (void)addDefaultHttpFeild{
     [self setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     [self setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-}
-
-- (void)addAFHttpFeilds {
-    NSDictionary *httpFeilds = [HZHttpSender getAllHttpHeaderField];
-    [httpFeilds enumerateKeysAndObjectsUsingBlock:^(id field, id value, BOOL * __unused stop) {
-        if (![self valueForHTTPHeaderField:field]) {
-            [self setValue:value forHTTPHeaderField:field];
-        }
-    }];
 }
 
 

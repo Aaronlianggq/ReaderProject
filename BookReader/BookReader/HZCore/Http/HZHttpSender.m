@@ -29,6 +29,11 @@ static NSMutableArray*_HttpTasks = nil;
     HZAFHttpSessionManager.securityPolicy = securityPolicy;
 }
 
++ (void)setTimeOut:(NSTimeInterval)timeout {
+    HZAFHttpSessionManager.requestSerializer.timeoutInterval = timeout;
+    [HZURLRequest setTimeout:timeout];
+}
+
 + (void)setValue:(id)value forHTTPHeaderFieldKey:(NSString *)key
 {
     if(key && value)
@@ -40,46 +45,58 @@ static NSMutableArray*_HttpTasks = nil;
 }
 
 
-#pragma mark -- httpRequest Method
-+ (NSURLSessionTask *)httpDataGet:(NSString *)urlPath
-                           params:(NSDictionary *)params
-                         callBack:(HZTTPResponseBlock)callBack {
-    
-    HZURLRequest *requst = [HZURLRequest urlRequestForGet:urlPath parameters:params];
-    return [self httpRequestObjectWithRequest:requst callBack:callBack ];
-    
-}
-
-
-+ (NSURLSessionTask *)httpDataPost:(NSString *)urlPath
-                            params:(NSDictionary *)params
-                          callBack:(HZTTPResponseBlock)callBack {
-    
-    HZURLRequest *requst = [HZURLRequest urlRequestForPost:urlPath parameters:params];
-    return [self httpRequestObjectWithRequest:requst callBack:callBack];
-}
-
-+ (NSURLSessionTask *)httpRequestObjectWithRequest:(NSURLRequest *)request
-                                          callBack:(HZTTPResponseBlock)callBack
++ (NSURLSessionTask *)httpRequestObjectWithRequest:(HZURLRequest *)request
+                                          callBack:(void (^)(NSURLResponse *  response, id   responseObject, NSError *  error))callback
 {
+    
+    if(request == nil) return nil;
+    
+    NSDictionary *httpFeilds = HZAFHttpSessionManager.requestSerializer.HTTPRequestHeaders;
+    
+    [httpFeilds enumerateKeysAndObjectsUsingBlock:^(id field, id value, BOOL * __unused stop) {
+        if (![request valueForHTTPHeaderField:field]) {
+            [request setValue:value forHTTPHeaderField:field];
+        }
+    }];
+    
     __block NSURLSessionTask* task = nil;
     task = [HZAFHttpSessionManager dataTaskWithRequest:request
                       uploadProgress:nil
                     downloadProgress:nil
                    completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-                       
-                       [_HttpTasks removeObject:task];
-                       
-                       HZResponse *hzResponse = [self responseWithReuslt:responseObject error:error];
-                       callBack(hzResponse);
-                       
+                       callback(response,responseObject,error);
                    }];
-    
-    [_HttpTasks addObject:task];
-    
     [task resume];
     return task;
 }
+
+
+/** 直接使用系统原生的获取tasks方法，防止AF阻塞主线程 */
++ (void)cancelRequest:(NSString *)urlPath {
+    
+    NSURLSession* session = HZAFHttpSessionManager.session;
+    [session getTasksWithCompletionHandler:^(NSArray<NSURLSessionDataTask *> * _Nonnull dataTasks, NSArray<NSURLSessionUploadTask *> * _Nonnull uploadTasks, NSArray<NSURLSessionDownloadTask *> * _Nonnull downloadTasks) {
+        NSArray* tasks = dataTasks;
+        for (NSURLSessionTask* task in tasks) {
+            NSURLRequest* request = task.currentRequest;
+            if ([[request.URL.absoluteString lowercaseString] hasPrefix:[urlPath lowercaseString]]) {
+                [task cancel];
+                break;
+            }
+        }
+    }];
+}
+
++ (void)cancelAllRequest {
+    NSURLSession* session = HZAFHttpSessionManager.session;
+    [session getTasksWithCompletionHandler:^(NSArray<NSURLSessionDataTask *> * _Nonnull dataTasks, NSArray<NSURLSessionUploadTask *> * _Nonnull uploadTasks, NSArray<NSURLSessionDownloadTask *> * _Nonnull downloadTasks) {
+        NSArray* tasks = dataTasks;
+        for (NSURLSessionTask* task in tasks) {
+            [task cancel];
+        }
+    }];
+}
+
 
 @end
 

@@ -7,42 +7,32 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "HZResponse.h"
 
-typedef void(^HZTTPResponseBlock)(HZResponse *response);
-
-
+@class HZURLRequest;
 @interface HZHttpSender : NSObject
 
-+ (NSDictionary <NSString *, NSString *> *)getAllHttpHeaderField;
++ (void)setTimeOut:(NSTimeInterval)timeout;
 + (void)setValue:(id)value forHTTPHeaderFieldKey:(NSString *)key;
-
-#pragma mark -- httpRequest Method  目前只设置GET和POST
-
-/**
- 接口请求 POST
-
- @param urlPath 请求地址
- @param params 请求参数
- @param callBack 返回结果
- @return 返回http请求对象
- */
-+ (NSURLSessionTask *)httpDataPost:(NSString *)urlPath
-                            params:(NSDictionary *)params
-                          callBack:(HZTTPResponseBlock)callBack;
-
++ (NSDictionary <NSString *, NSString *> *)getAllHttpHeaderField;
 
 /**
- 接口请求 GET
+ 接口请求 Request
  
- @param urlPath 请求地址
- @param params 请求参数
- @param callBack 返回结果
+ @param request 请求对象
+ @param callback 返回结果
  @return 返回http请求对象
  */
-+ (NSURLSessionTask *)httpDataGet:(NSString *)urlPath
-                           params:(NSDictionary *)params
-                         callBack:(HZTTPResponseBlock)callBack;
++ (NSURLSessionTask *)httpRequestObjectWithRequest:(HZURLRequest *)request
+                                          callBack:(void (^)(NSURLResponse *  response, id   responseObject, NSError *  error))callback;
+
+
++ (void)cancelRequest:(NSString *)urlPath;
+
+
++ (void)cancelAllRequest;
+
 
 @end
 
