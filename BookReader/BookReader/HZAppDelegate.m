@@ -64,10 +64,12 @@
 - (void)setViewRoot {
     UIStoryboard *storyboardMain = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     LGQSideViewController *sideVc = [storyboardMain instantiateViewControllerWithIdentifier:@"storyboardSideViewControoler"];
-    sideVc.rootViewController = [[HZTabBarController alloc] init];
+    HZTabBarController *main = [[HZTabBarController alloc] init];
+    sideVc.rootViewController = main;
+    main.sideViewController = sideVc;
     sideVc.leftViewController = [[PersonalController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:sideVc];
-    [nav setNavigationBarHidden:YES animated:NO];
+    
     self.window.rootViewController = nav;
 }
 

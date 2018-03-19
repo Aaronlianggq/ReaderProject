@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LGQSideViewController.h"
 
 @interface HZTabBarController : UITabBarController
-
+@property (nonatomic,weak) LGQSideViewController *sideViewController;
 @end

@@ -25,9 +25,18 @@
     [self setupViewControllers];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+}
+
+#pragma mark vcs
 - (void)setupViewControllers {
-    
     
     HZBaseNavigationViewController *bkNaviVc = [self getNavContllerClass:[BookShelfController class] WithBarItemTitle:@"书架" imageName:@"bookSelf_nomal" selectedImageName:@"bookSelf_selected"];
     
@@ -54,7 +63,14 @@
     [navi.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]} forState:UIControlStateSelected];
     [navi.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor grayColor]} forState:UIControlStateNormal];
     [navi.tabBarItem setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13.0]} forState:UIControlStateNormal];
+    vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"我的" style:0 target:self action:@selector(leftBarItemClick)];
+    
     return navi;
+}
+
+#pragma mark -
+- (void)leftBarItemClick {
+    [self.sideViewController showLeftViewController:YES];
 }
 
 @end
