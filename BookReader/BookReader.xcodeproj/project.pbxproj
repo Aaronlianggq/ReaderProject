@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E4340F36205F8E5400B1413A /* HZHttpRequestChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4340F35205F8E5400B1413A /* HZHttpRequestChannel.m */; };
 		E4340F3A205F914D00B1413A /* HZGCDSafetyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = E4340F39205F914D00B1413A /* HZGCDSafetyBlock.m */; };
+		E4340FC2205FC2D200B1413A /* UIImageView+HZImageLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = E4340FC1205FC2D200B1413A /* UIImageView+HZImageLoad.m */; };
+		E4340FC6205FC41100B1413A /* UIScrollView+HZReFresh.m in Sources */ = {isa = PBXBuildFile; fileRef = E4340FC5205FC41100B1413A /* UIScrollView+HZReFresh.m */; };
 		E445AFA6205ED1A1004DEE85 /* NSString+RectSize.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF96205ED1A1004DEE85 /* NSString+RectSize.m */; };
 		E445AFA9205ED1A1004DEE85 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF9B205ED1A1004DEE85 /* UIImage+Utilities.m */; };
 		E445AFAB205ED1A1004DEE85 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF9E205ED1A1004DEE85 /* NSString+MD5.m */; };
@@ -126,6 +128,10 @@
 		E4340F35205F8E5400B1413A /* HZHttpRequestChannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZHttpRequestChannel.m; sourceTree = "<group>"; };
 		E4340F38205F914D00B1413A /* HZGCDSafetyBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZGCDSafetyBlock.h; sourceTree = "<group>"; };
 		E4340F39205F914D00B1413A /* HZGCDSafetyBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZGCDSafetyBlock.m; sourceTree = "<group>"; };
+		E4340FC0205FC2D200B1413A /* UIImageView+HZImageLoad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HZImageLoad.h"; sourceTree = "<group>"; };
+		E4340FC1205FC2D200B1413A /* UIImageView+HZImageLoad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HZImageLoad.m"; sourceTree = "<group>"; };
+		E4340FC4205FC41100B1413A /* UIScrollView+HZReFresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+HZReFresh.h"; sourceTree = "<group>"; };
+		E4340FC5205FC41100B1413A /* UIScrollView+HZReFresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+HZReFresh.m"; sourceTree = "<group>"; };
 		E445AF8F205ED1A1004DEE85 /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utilities.h"; sourceTree = "<group>"; };
 		E445AF91205ED1A1004DEE85 /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
 		E445AF93205ED1A1004DEE85 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
@@ -383,6 +389,24 @@
 			path = GCDSafetyBlock;
 			sourceTree = "<group>";
 		};
+		E4340FBF205FC28000B1413A /* ImageViewLoad */ = {
+			isa = PBXGroup;
+			children = (
+				E4340FC0205FC2D200B1413A /* UIImageView+HZImageLoad.h */,
+				E4340FC1205FC2D200B1413A /* UIImageView+HZImageLoad.m */,
+			);
+			path = ImageViewLoad;
+			sourceTree = "<group>";
+		};
+		E4340FC3205FC3DC00B1413A /* UIScrollViewRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				E4340FC4205FC41100B1413A /* UIScrollView+HZReFresh.h */,
+				E4340FC5205FC41100B1413A /* UIScrollView+HZReFresh.m */,
+			);
+			path = UIScrollViewRefresh;
+			sourceTree = "<group>";
+		};
 		E445AF8E205ED1A1004DEE85 /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,6 +578,8 @@
 		E450C7DD205BA11E00A3A645 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E4340FC3205FC3DC00B1413A /* UIScrollViewRefresh */,
+				E4340FBF205FC28000B1413A /* ImageViewLoad */,
 				E450C7FE205BD0D300A3A645 /* File */,
 			);
 			path = Views;
@@ -1062,6 +1088,7 @@
 				E450C928205EB83D00A3A645 /* HZServerAddressManager.m in Sources */,
 				E450C7E9205BA38100A3A645 /* BookShelfController.m in Sources */,
 				E450C8D5205BD3C800A3A645 /* MJRefreshNormalHeader.m in Sources */,
+				E4340FC2205FC2D200B1413A /* UIImageView+HZImageLoad.m in Sources */,
 				E450C7D4205B9FB700A3A645 /* HZBaseCollectionView.m in Sources */,
 				E445AFB2205ED402004DEE85 /* NSObject+Swizzle.m in Sources */,
 				E450C8D6205BD3C800A3A645 /* MJRefreshStateHeader.m in Sources */,
@@ -1099,6 +1126,7 @@
 				E450C88B205BD2CF00A3A645 /* NSButton+WebCache.m in Sources */,
 				E450C8CC205BD3C800A3A645 /* UIScrollView+MJExtension.m in Sources */,
 				E450C7EC205BA3B600A3A645 /* FeaturedAlbumController.m in Sources */,
+				E4340FC6205FC41100B1413A /* UIScrollView+HZReFresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
