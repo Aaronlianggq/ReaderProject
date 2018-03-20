@@ -11,9 +11,9 @@
 @interface NSString (RectSize)
 
 /// 获取指定字体、最大宽度下的最佳size（普通文本）
-- (CGSize)labelSizeWithWidth:(CGFloat)width font:(UIFont *)font;
+- (CGSize)sizeWithWidth:(CGFloat)width font:(UIFont *)font;
 /// 获取指定字体、最大高度下的最佳size（普通文本）
-- (CGSize)labelSizeWithHeigth:(CGFloat)height font:(UIFont *)font;
+- (CGSize)sizeWithHeigth:(CGFloat)height font:(UIFont *)font;
 /// 获取指定字体、指定size的最佳size
 - (CGSize)textSizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size;
 @end

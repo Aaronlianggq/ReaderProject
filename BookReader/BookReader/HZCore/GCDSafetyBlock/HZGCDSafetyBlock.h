@@ -39,11 +39,11 @@ OBJC_EXPORT void dispatch_global_main(dispatch_block_t globalBlock, dispatch_blo
  *
  *  @param globalBlock 异步线程
  */
-OBJC_EXPORT void globalThread(dispatch_block_t globalBlock);
+OBJC_EXPORT void global_thread(dispatch_block_t globalBlock);
 
 /**
  *  转主线程
  *
- *  @param mainBlock   主线程
+ *  @param mainBlock   异步主线程
  */
-OBJC_EXPORT void mainThread(dispatch_block_t mainBlock);
+OBJC_EXPORT void main_async_thread(dispatch_block_t mainBlock);

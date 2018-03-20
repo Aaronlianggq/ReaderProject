@@ -8,13 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (Swizzle)
-
-+ (void)swizzleClassMethod:(Class)classname originSelector:(SEL)originSelector otherSelector:(SEL)otherSelector;
-+ (void)swizzleInstanceMethod:(Class)classname originSelector:(SEL)originSelector otherSelector:(SEL)otherSelector;
-
-@end
-
 #pragma mark - ---- NSArray
 
 @interface NSArray (Swizzle)

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HZBaseNavigationViewController.h"
 
 @interface HZBaseViewController : UIViewController
+
+@property (nonatomic,weak) HZBaseNavigationViewController *hzNavigationController;
 
 @end

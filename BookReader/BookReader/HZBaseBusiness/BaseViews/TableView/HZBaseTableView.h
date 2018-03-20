@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+HZExtension.h"
 
 @interface HZBaseTableView : UITableView
-
 @end
+
+
+@interface HZBaseTableCell : UITableViewCell;
+@end;

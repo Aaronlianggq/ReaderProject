@@ -34,13 +34,13 @@ void dispatch_global_main(dispatch_block_t globalBlock, dispatch_block_t mainBlo
     });
 }
 
-void globalThread(dispatch_block_t globalBlock) {
+void global_thread(dispatch_block_t globalBlock) {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         globalBlock();
     });
 }
 
-void mainThread(dispatch_block_t mainBlock) {
+void main_async_thread(dispatch_block_t mainBlock) {
     dispatch_async(dispatch_get_main_queue(), ^{
         mainBlock();
     });

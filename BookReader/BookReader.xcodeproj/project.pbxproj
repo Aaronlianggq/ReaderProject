@@ -11,6 +11,10 @@
 		E4340F3A205F914D00B1413A /* HZGCDSafetyBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = E4340F39205F914D00B1413A /* HZGCDSafetyBlock.m */; };
 		E4340FC2205FC2D200B1413A /* UIImageView+HZImageLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = E4340FC1205FC2D200B1413A /* UIImageView+HZImageLoad.m */; };
 		E4340FC6205FC41100B1413A /* UIScrollView+HZReFresh.m in Sources */ = {isa = PBXBuildFile; fileRef = E4340FC5205FC41100B1413A /* UIScrollView+HZReFresh.m */; };
+		E43410492060EBEE00B1413A /* HZUserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = E43410482060EBEE00B1413A /* HZUserDefault.m */; };
+		E434104D2060EFEE00B1413A /* UILabel+SizeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = E434104C2060EFEE00B1413A /* UILabel+SizeCalculator.m */; };
+		E43410552060F41900B1413A /* UIImage+Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = E43410542060F41900B1413A /* UIImage+Thumbnail.m */; };
+		E434105B2060F62300B1413A /* UIView+HZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E434105A2060F62300B1413A /* UIView+HZExtension.m */; };
 		E445AFA6205ED1A1004DEE85 /* NSString+RectSize.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF96205ED1A1004DEE85 /* NSString+RectSize.m */; };
 		E445AFA9205ED1A1004DEE85 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF9B205ED1A1004DEE85 /* UIImage+Utilities.m */; };
 		E445AFAB205ED1A1004DEE85 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF9E205ED1A1004DEE85 /* NSString+MD5.m */; };
@@ -44,7 +48,6 @@
 		E450C7F5205BA53F00A3A645 /* HZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7F4205BA53F00A3A645 /* HZTabBarController.m */; };
 		E450C7F8205BB78300A3A645 /* LGQSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7F7205BB78200A3A645 /* LGQSideViewController.m */; };
 		E450C7FC205BBB8B00A3A645 /* PersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C7FB205BBB8B00A3A645 /* PersonalController.m */; };
-		E450C7FF205BD0D300A3A645 /* File in Resources */ = {isa = PBXBuildFile; fileRef = E450C7FE205BD0D300A3A645 /* File */; };
 		E450C80E205BD1F200A3A645 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C805205BD1F100A3A645 /* AFURLResponseSerialization.m */; };
 		E450C80F205BD1F200A3A645 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C806205BD1F100A3A645 /* AFHTTPSessionManager.m */; };
 		E450C810205BD1F200A3A645 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C808205BD1F100A3A645 /* AFURLSessionManager.m */; };
@@ -132,6 +135,14 @@
 		E4340FC1205FC2D200B1413A /* UIImageView+HZImageLoad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HZImageLoad.m"; sourceTree = "<group>"; };
 		E4340FC4205FC41100B1413A /* UIScrollView+HZReFresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+HZReFresh.h"; sourceTree = "<group>"; };
 		E4340FC5205FC41100B1413A /* UIScrollView+HZReFresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+HZReFresh.m"; sourceTree = "<group>"; };
+		E43410472060EBEE00B1413A /* HZUserDefault.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZUserDefault.h; sourceTree = "<group>"; };
+		E43410482060EBEE00B1413A /* HZUserDefault.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZUserDefault.m; sourceTree = "<group>"; };
+		E434104B2060EFEE00B1413A /* UILabel+SizeCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SizeCalculator.h"; sourceTree = "<group>"; };
+		E434104C2060EFEE00B1413A /* UILabel+SizeCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SizeCalculator.m"; sourceTree = "<group>"; };
+		E43410532060F41900B1413A /* UIImage+Thumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Thumbnail.h"; sourceTree = "<group>"; };
+		E43410542060F41900B1413A /* UIImage+Thumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Thumbnail.m"; sourceTree = "<group>"; };
+		E43410592060F62300B1413A /* UIView+HZExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HZExtension.h"; sourceTree = "<group>"; };
+		E434105A2060F62300B1413A /* UIView+HZExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HZExtension.m"; sourceTree = "<group>"; };
 		E445AF8F205ED1A1004DEE85 /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utilities.h"; sourceTree = "<group>"; };
 		E445AF91205ED1A1004DEE85 /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
 		E445AF93205ED1A1004DEE85 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
@@ -197,7 +208,6 @@
 		E450C7F7205BB78200A3A645 /* LGQSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGQSideViewController.m; sourceTree = "<group>"; };
 		E450C7FA205BBB8B00A3A645 /* PersonalController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalController.h; sourceTree = "<group>"; };
 		E450C7FB205BBB8B00A3A645 /* PersonalController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalController.m; sourceTree = "<group>"; };
-		E450C7FE205BD0D300A3A645 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		E450C801205BD1F100A3A645 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
 		E450C802205BD1F100A3A645 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		E450C803205BD1F100A3A645 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
@@ -407,9 +417,56 @@
 			path = UIScrollViewRefresh;
 			sourceTree = "<group>";
 		};
+		E43410462060EB6000B1413A /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				E43410472060EBEE00B1413A /* HZUserDefault.h */,
+				E43410482060EBEE00B1413A /* HZUserDefault.m */,
+			);
+			path = UserDefault;
+			sourceTree = "<group>";
+		};
+		E434104A2060EFDF00B1413A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E434104B2060EFEE00B1413A /* UILabel+SizeCalculator.h */,
+				E434104C2060EFEE00B1413A /* UILabel+SizeCalculator.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E43410512060F26000B1413A /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				E450C7CF205B9F4200A3A645 /* HZBaseTableView.h */,
+				E450C7D0205B9F4200A3A645 /* HZBaseTableView.m */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		E43410522060F27100B1413A /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E450C7D2205B9FB700A3A645 /* HZBaseCollectionView.h */,
+				E450C7D3205B9FB700A3A645 /* HZBaseCollectionView.m */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		E434105C20610BD200B1413A /* HZAppLoad */ = {
+			isa = PBXGroup;
+			children = (
+				E445AFB0205ED402004DEE85 /* NSObject+Swizzle.h */,
+				E445AFB1205ED402004DEE85 /* NSObject+Swizzle.m */,
+			);
+			path = HZAppLoad;
+			sourceTree = "<group>";
+		};
 		E445AF8E205ED1A1004DEE85 /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				E43410532060F41900B1413A /* UIImage+Thumbnail.h */,
+				E43410542060F41900B1413A /* UIImage+Thumbnail.m */,
 				E445AF8F205ED1A1004DEE85 /* UIImage+Utilities.h */,
 				E445AF9B205ED1A1004DEE85 /* UIImage+Utilities.m */,
 				E445AF91205ED1A1004DEE85 /* NSString+UUID.h */,
@@ -481,6 +538,7 @@
 		E450C70D205A59E800A3A645 /* BookReader */ = {
 			isa = PBXGroup;
 			children = (
+				E434105C20610BD200B1413A /* HZAppLoad */,
 				E450C8DE205E507B00A3A645 /* HZCore */,
 				E450C7C7205B9EDD00A3A645 /* HZBaseBusiness */,
 				E450C7C9205B9EDD00A3A645 /* HZReaderBusiness */,
@@ -543,12 +601,12 @@
 		E450C7CB205B9EF700A3A645 /* BaseViews */ = {
 			isa = PBXGroup;
 			children = (
+				E43410522060F27100B1413A /* CollectionView */,
+				E43410512060F26000B1413A /* TableView */,
 				E450C7CC205B9F2000A3A645 /* HZBaseView.h */,
 				E450C7CD205B9F2000A3A645 /* HZBaseView.m */,
-				E450C7CF205B9F4200A3A645 /* HZBaseTableView.h */,
-				E450C7D0205B9F4200A3A645 /* HZBaseTableView.m */,
-				E450C7D2205B9FB700A3A645 /* HZBaseCollectionView.h */,
-				E450C7D3205B9FB700A3A645 /* HZBaseCollectionView.m */,
+				E43410592060F62300B1413A /* UIView+HZExtension.h */,
+				E434105A2060F62300B1413A /* UIView+HZExtension.m */,
 			);
 			path = BaseViews;
 			sourceTree = "<group>";
@@ -578,9 +636,9 @@
 		E450C7DD205BA11E00A3A645 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E434104A2060EFDF00B1413A /* Category */,
 				E4340FC3205FC3DC00B1413A /* UIScrollViewRefresh */,
 				E4340FBF205FC28000B1413A /* ImageViewLoad */,
-				E450C7FE205BD0D300A3A645 /* File */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -869,6 +927,7 @@
 				E445AF8E205ED1A1004DEE85 /* Categorys */,
 				E450C8DF205E508900A3A645 /* Http */,
 				E4340F37205F90E200B1413A /* GCDSafetyBlock */,
+				E43410462060EB6000B1413A /* UserDefault */,
 			);
 			path = HZCore;
 			sourceTree = "<group>";
@@ -931,8 +990,6 @@
 				E450C90F205E754D00A3A645 /* HZModule.m */,
 				E450C911205E760600A3A645 /* HZCentralManager.h */,
 				E450C912205E760600A3A645 /* HZCentralManager.m */,
-				E445AFB0205ED402004DEE85 /* NSObject+Swizzle.h */,
-				E445AFB1205ED402004DEE85 /* NSObject+Swizzle.m */,
 				E4890C45205EE319009E9E31 /* HZModuleModelProtocol.h */,
 			);
 			path = BusinessCore;
@@ -1004,7 +1061,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E450C7FF205BD0D300A3A645 /* File in Resources */,
 				E450C71B205A59E800A3A645 /* LaunchScreen.storyboard in Resources */,
 				E450C8CB205BD3C800A3A645 /* MJRefresh.bundle in Resources */,
 				E450C718205A59E800A3A645 /* Assets.xcassets in Resources */,
@@ -1030,6 +1086,8 @@
 				E450C87D205BD2CF00A3A645 /* MKAnnotationView+WebCache.m in Sources */,
 				E450C810205BD1F200A3A645 /* AFURLSessionManager.m in Sources */,
 				E445AFCB205ED90F004DEE85 /* MJPropertyType.m in Sources */,
+				E434105B2060F62300B1413A /* UIView+HZExtension.m in Sources */,
+				E434104D2060EFEE00B1413A /* UILabel+SizeCalculator.m in Sources */,
 				E450C834205BD25E00A3A645 /* MASCompositeConstraint.m in Sources */,
 				E450C8DC205BD3C800A3A645 /* MJRefreshComponent.m in Sources */,
 				E450C837205BD25E00A3A645 /* NSArray+MASAdditions.m in Sources */,
@@ -1048,6 +1106,7 @@
 				E450C8D8205BD3C800A3A645 /* MJRefreshFooter.m in Sources */,
 				E450C88F205BD2CF00A3A645 /* SDWebImageTransition.m in Sources */,
 				E450C7D1205B9F4200A3A645 /* HZBaseTableView.m in Sources */,
+				E43410492060EBEE00B1413A /* HZUserDefault.m in Sources */,
 				E450C891205BD2CF00A3A645 /* UIImageView+WebCache.m in Sources */,
 				E450C88C205BD2CF00A3A645 /* SDAnimatedImageRep.m in Sources */,
 				E4340F3A205F914D00B1413A /* HZGCDSafetyBlock.m in Sources */,
@@ -1081,6 +1140,7 @@
 				E450C7FC205BBB8B00A3A645 /* PersonalController.m in Sources */,
 				E450C899205BD2CF00A3A645 /* SDWebImageWebPCoder.m in Sources */,
 				E450C80F205BD1F200A3A645 /* AFHTTPSessionManager.m in Sources */,
+				E43410552060F41900B1413A /* UIImage+Thumbnail.m in Sources */,
 				E445AFCF205ED90F004DEE85 /* MJExtensionConst.m in Sources */,
 				E445AFCC205ED90F004DEE85 /* NSObject+MJKeyValue.m in Sources */,
 				E450C8D7205BD3C800A3A645 /* MJRefreshGifHeader.m in Sources */,

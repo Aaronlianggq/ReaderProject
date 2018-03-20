@@ -45,49 +45,47 @@
 }
 
 #pragma mark publick
-- (void)getBookInfoUrlCallBack:(void (^)(NSObject<HZModuleModelProtocol> *model))callback
-             withProtocalClass:(Class)classModel{
+- (void)getBookParams:(NSDictionary *)param
+             callBack:(void (^)(NSObject<HZModuleModelProtocol> *model))callback
+    withProtocalClass:(Class)classModel{
     if(![self isClassToModuleProtocal:classModel]){
         return;
     }
     
     [self->requestChannel get:self.getBookInfoUrl
-                       params:nil
+                       params:param
                      callBack:^(HZResponse *response) {
-                         
-        if(response.isError){
-            callback(nil);
-        }else{
-            NSDictionary *body = response.body;
-            NSObject <HZModuleModelProtocol> *model = [[classModel alloc] init];
-
-            [model setParamsWithDictionary:body];
-            
-            mainThread(^{
-                callback(model);
-            });
-        }
+                         id bookModel = nil;
+                         if(!response.isError){
+                             NSDictionary *body = response.body;
+                             NSObject <HZModuleModelProtocol> *model = [[classModel alloc] init];
+                             [model setParamsWithDictionary:body];
+                             bookModel = model;
+                         }
+                         main_async_thread(^{
+                             callback(bookModel);
+                         });
     }];
 }
 
-- (void)getUserShelfBooksCallBack:(void (^)(NSArray<NSObject<HZModuleModelProtocol> *> *bookModels))callback
-                withProtocalClass:(Class)classModel {
+- (void)getUserShelfBooksParams:(NSDictionary *)param
+                       callBack:(void (^)(NSArray<NSObject<HZModuleModelProtocol> *> *bookModels))callback
+              withProtocalClass:(Class)classModel {
     if(![self isClassToModuleProtocal:classModel]){
         return;
     }
     
     [self->requestChannel get:self.getBookInfoUrl
-                       params:nil
+                       params:param
                      callBack:^(HZResponse *response) {
-        if(response.isError){
-            callback(nil);
-        }else{
-            NSArray *bodyArr = response.body;
-            NSArray *bookModels = [classModel getModelsWithArray:bodyArr];
-            mainThread(^{
-                callback(bookModels);
-            });
-        }
+                         NSArray *bookModels = nil;
+                         if(!response.isError){
+                             NSArray *bodyArr = response.body;
+                             bookModels = [classModel getModelsWithArray:bodyArr];
+                         }
+                         main_async_thread(^{
+                             callback(bookModels);
+                         });
 
     }];
 }

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+HZExtension.h"
 
 @interface HZBaseView : UIView
 

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+HZExtension.h"
 
 @interface HZBaseCollectionView : UICollectionView
-
 @end
+
+
+@interface HZBaseCollectionCell : UICollectionViewCell;
+@end;

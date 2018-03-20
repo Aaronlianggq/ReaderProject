@@ -21,6 +21,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self appAdaptation];
+    
     [self setupModules];
     
     [self setViewRoot];
@@ -57,6 +59,12 @@
 }
 
 #pragma mark --root
+- (void)appAdaptation {
+    if (@available(iOS 11.0, *)) {
+        [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+    }
+}
+
 - (void)setupModules {
     [hzManager setUpAllModule];
 }

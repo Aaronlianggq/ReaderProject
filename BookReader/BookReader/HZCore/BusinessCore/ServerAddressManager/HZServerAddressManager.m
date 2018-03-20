@@ -22,14 +22,6 @@
     RegisterHZModule([self class]);
 }
 
-- (instancetype)initWithCentralManager {
-    self = [super initWithCentralManager];
-    if(self){
-        _hostDic = [[NSMutableDictionary alloc] init];
-    }
-    return self;
-}
-
 - (void)setupWithContainer {
     if(_hostDic){
         _hostDic = [[NSMutableDictionary alloc] init];

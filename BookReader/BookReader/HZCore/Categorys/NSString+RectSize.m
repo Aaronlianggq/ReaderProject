@@ -11,7 +11,7 @@
 @implementation NSString (RectSize)
 
 // 计算显示文字需要的矩形尺寸
-- (CGSize)labelSizeWithWidth:(CGFloat)width font:(UIFont *)font
+- (CGSize)sizeWithWidth:(CGFloat)width font:(UIFont *)font
 {
     CGSize maxSize = CGSizeMake(width, CGFLOAT_MAX);
     CGSize expectedSize =CGSizeZero;
@@ -27,7 +27,7 @@
 }
 
 
-- (CGSize)labelSizeWithHeigth:(CGFloat)height font:(UIFont *)font
+- (CGSize)sizeWithHeigth:(CGFloat)height font:(UIFont *)font
 {
     CGSize maxSize = CGSizeMake(CGFLOAT_MAX, height);
     CGSize expectedSize =CGSizeZero;

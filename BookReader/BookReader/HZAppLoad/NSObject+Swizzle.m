@@ -9,6 +9,13 @@
 #import "NSObject+Swizzle.h"
 #import <objc/runtime.h>
 
+@interface NSObject (Swizzle)
+
++ (void)swizzleClassMethod:(Class)classname originSelector:(SEL)originSelector otherSelector:(SEL)otherSelector;
++ (void)swizzleInstanceMethod:(Class)classname originSelector:(SEL)originSelector otherSelector:(SEL)otherSelector;
+
+@end
+
 @implementation NSObject (Swizzle)
 
 #pragma mark - swizzle method

@@ -110,6 +110,7 @@ static HZCentralManager *_instance;
     [_modules removeAllObjects];
 }
 
+#pragma mark module manager
 - (id)managerForClass:(Class)managerClass {
     
     return _modules[NSStringFromClass(managerClass)];

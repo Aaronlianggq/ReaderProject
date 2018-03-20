@@ -28,6 +28,8 @@
 #define IOS11 ([[UIDevice currentDevice].systemVersion floatValue] >= 11.0)
 
 #define Is_Phone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define Is_PhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
 #define HZAppScale  MAX([[UIScreen mainScreen] scale],2) //设备分辨率  最小2x图
 #define HZScreenBound [UIScreen mainScreen].bounds
 #define HZAppInfoDictionary  [[NSBundle mainBundle] infoDictionary]  //app应用数据
