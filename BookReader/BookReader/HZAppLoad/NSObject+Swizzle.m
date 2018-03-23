@@ -67,6 +67,49 @@
 
 @end
 
+@implementation NSMutableArray (Swizzle)
+
++ (void)load {
+    
+    if (NSClassFromString(@"NSMutableArray")) {
+
+        SEL originalSelector = @selector(addObject:);
+        SEL swizzledSelector = @selector(swizzled_addObject:);
+        
+        SEL insertSelector = @selector(insertObject:atIndex:);
+        SEL sizInsertSelector = @selector(swizzled_insertObject:atIndex:);
+        
+        [self swizzleInstanceMethod:NSClassFromString(@"__NSArrayM") originSelector:originalSelector otherSelector:swizzledSelector];
+        [self swizzleInstanceMethod:NSClassFromString(@"__NSArrayM") originSelector:insertSelector otherSelector:sizInsertSelector];
+    }
+}
+
+- (void)swizzled_addObject:(id)object {
+
+    if (object == nil) {
+#ifdef DEBUG
+        NSAssert(NO, @"array add object is nil" );
+#else
+        return ;
+#endif
+        
+    }
+    [self swizzled_addObject:object];
+}
+
+- (void)swizzled_insertObject:(id)anObject atIndex:(NSUInteger)index {
+    if(anObject == nil || [self count] < index){
+#ifdef DEBUG
+        NSAssert(NO, @"array insert index %ld > count %ld  or anObject is %@", (long)index, (long)(self.count),anObject);
+#else
+        return ;
+#endif
+    }
+    [self swizzled_insertObject:anObject atIndex:index];
+}
+
+@end
+
 
 @implementation NSMutableDictionary (Swizzle)
 

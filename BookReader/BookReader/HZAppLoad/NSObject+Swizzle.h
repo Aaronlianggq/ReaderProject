@@ -14,6 +14,11 @@
 
 @end
 
+@interface NSMutableArray (Swizzle)
+
+@end
+
+
 #pragma mark - ---- NSMutableDictionary
 
 @interface NSMutableDictionary (Swizzle)
