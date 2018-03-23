@@ -1,5 +1,5 @@
 //
-//  FileModuleManager.h
+//  HZFileModuleManager.h
 //  BookReader
 //
 //  Created by lianggq on 2018/3/22.
@@ -8,7 +8,7 @@
 
 #import "HZModule.h"
 
-@interface FileModuleManager : HZModule
+@interface HZFileModuleManager : HZModule
 
 - (BOOL)removeFilePath:(NSString *)path;
 
@@ -17,7 +17,7 @@
 @end
 
 
-@interface FileModuleManager(HZBook)
+@interface HZFileModuleManager(HZBook)
 
 - (BOOL )saveCurrentUserPathWithBookId:(NSString *)bookId;
 - (NSString *)getCurrentUserPathWithBookId:(NSString *)bookId;

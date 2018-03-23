@@ -18,7 +18,7 @@ const static NSNotificationName DownLoadTaskCountChangeNotification = @"downLoad
 
 @implementation HZDownLoadModuleManager
 + (void)load {
-    RegisterHZModule([self class]);
+    RegisterLoadHZModule([self class]);
 }
 
 - (void)setupWithContainer {

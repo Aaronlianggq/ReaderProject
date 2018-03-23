@@ -8,26 +8,27 @@
 
 #import "HZCentralManager.h"
 #import "HZModule.h"
+#import "HZServerAddressManager.h"
 
+static HZCentralManager *_instance;
 static NSMutableSet *ModuleClassSet;
-void RegisterHZModule(Class moduleClass) {
-    
+void RegisterLoadHZModule(Class moduleClass) {
     if (ModuleClassSet == nil) {
-        
         ModuleClassSet = [[NSMutableSet alloc] init];
     }
-    
     [ModuleClassSet addObject:moduleClass];
+
 }
 
 @interface HZCentralManager() {
     NSMutableDictionary *_modules;
     BOOL _isSetuped;
 }
+
 @end
 
 @implementation HZCentralManager
-static HZCentralManager *_instance;
+
 + (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -74,7 +75,6 @@ static HZCentralManager *_instance;
     @synchronized(self){
         if(!_isSetuped)
             [self p_setupManagers];
-        
         _isSetuped = YES;
     }
 }
@@ -82,14 +82,16 @@ static HZCentralManager *_instance;
 - (void)p_setupManagers {
     
     [ModuleClassSet enumerateObjectsUsingBlock:^(Class clzz, BOOL *stop) {
+        [self p_setupManagerClass:clzz];
+    }];
+}
+
+- (void)p_setupManagerClass:(Class)clzz {
+    if(!_modules[NSStringFromClass(clzz)]){
         HZModule *module = [[clzz alloc] initWithCentralManager];
         _modules[NSStringFromClass(clzz)] = module;
-    }];
-    
-    [_modules.allValues enumerateObjectsUsingBlock:^(HZModule *module, NSUInteger idx, BOOL *stop) {
         [module setupWithContainer];
-    }];
-    
+    }
 }
 
 #pragma mark - tearDown
@@ -111,14 +113,16 @@ static HZCentralManager *_instance;
 }
 
 #pragma mark module manager
+- (void)registerManager:(Class)managerClass {
+    if(![ModuleClassSet containsObject:managerClass])
+        [ModuleClassSet addObject:managerClass];
+    
+    [self p_setupManagerClass:managerClass];
+}
+
 - (id)managerForClass:(Class)managerClass {
     
     return _modules[NSStringFromClass(managerClass)];
-}
-
-#pragma mark --modules
-- (HZBookModuleManger *)bookModuleManger {
-    return [self managerForClass:[HZBookModuleManger class]];
 }
 
 - (HZServerAddressManager *)serverManger {

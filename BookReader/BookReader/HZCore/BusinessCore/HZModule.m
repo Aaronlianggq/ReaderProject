@@ -7,7 +7,7 @@
 //
 
 #import "HZModule.h"
-#import "HZCentralManager.h"
+#import "HZServerAddressManager.h"
 
 @interface HZModule()
 
@@ -15,7 +15,7 @@
 
 @implementation HZModule
 
-- (BOOL)isClassToModuleProtocal:(Class)aclass {
+- (BOOL)isClassToModuleProtocal:(Class<HZModuleModelProtocol>)aclass {
     
     BOOL isToProtocal = [aclass conformsToProtocol:@protocol(HZModuleModelProtocol)];
 #ifdef DEBUG

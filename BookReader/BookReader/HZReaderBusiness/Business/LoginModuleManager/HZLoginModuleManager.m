@@ -11,7 +11,7 @@
 @implementation HZLoginModuleManager
 
 + (void)load {
-    RegisterHZModule([self class]);
+    RegisterLoadHZModule([self class]);
 }
 
 - (void)setupWithContainer {

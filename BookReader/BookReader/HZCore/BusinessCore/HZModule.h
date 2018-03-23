@@ -11,6 +11,8 @@
 #import "HZHttpRequestChannel.h"
 #import "HZModuleModelProtocol.h"
 #import "HZGCDSafetyBlock.h"
+#import "HZCentralManager.h"
+
 
 #define HZ_Current_Host     [HZModule getHostString]
 
@@ -20,7 +22,7 @@
  *  @param moduleClass 要注册的基础模块类
  *  由HZModuleManager 去实现
  */
-OBJC_EXPORT void RegisterHZModule(Class moduleClass);
+OBJC_EXPORT void RegisterLoadHZModule(Class moduleClass);
 
 /**
  *  基础模块的生命周期
@@ -62,7 +64,7 @@ OBJC_EXPORT void RegisterHZModule(Class moduleClass);
     void *queueTag;
 }
 
-- (BOOL)isClassToModuleProtocal:(Class)aclass;
+- (BOOL)isClassToModuleProtocal:(Class<HZModuleModelProtocol>)aclass;
 
 /**
  由中央管理器构造 CentralManager

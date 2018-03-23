@@ -1,19 +1,19 @@
 //
-//  FileModuleManager.m
+//  HZFileModuleManager.m
 //  BookReader
 //
 //  Created by lianggq on 2018/3/22.
 //  Copyright © 2018年 liang. All rights reserved.
 //
 
-#import "FileModuleManager.h"
+#import "HZFileModuleManager.h"
 
-@implementation FileModuleManager {
+@implementation HZFileModuleManager {
     NSFileManager *_fileManager;
 }
 
 + (void)load {
-    RegisterHZModule([self class]);
+    RegisterLoadHZModule([self class]);
 }
 
 - (void)setupWithContainer {
@@ -39,7 +39,7 @@
 @end
 
 
-@implementation FileModuleManager(HZBook)
+@implementation HZFileModuleManager(HZBook)
 
 - (BOOL )saveCurrentUserPathWithBookId:(NSString *)bookId {
     return YES;

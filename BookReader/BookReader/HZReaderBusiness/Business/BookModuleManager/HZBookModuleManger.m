@@ -17,7 +17,7 @@
 
 @implementation HZBookModuleManger
 + (void)load {
-    RegisterHZModule([self class]);
+    RegisterLoadHZModule([self class]);
 }
 
 #pragma mark --override
