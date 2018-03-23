@@ -28,11 +28,24 @@
                                           callBack:(void (^)(NSURLResponse *  response, id   responseObject, NSError *  error))callback;
 
 
-+ (void)cancelRequest:(NSString *)urlPath;
+
+/**
+ 下载文件接口请求
+
+ @param request 请求对象
+ @param downloadProgress 下载进度
+ @param destination 目标文件
+ @param completionHandler 完成返回结果
+ */
++ (NSURLSessionDownloadTask *)httpDownRequestObjectWithReqeust:(HZURLRequest *)request
+                                progress:(void(^) (NSProgress *downloadProgress))downloadProgress
+                             destination:(NSURL *(^)(NSURL *  targetPath, NSURLResponse *  response))destination
+                       completionHandler:(void(^)(NSURLResponse *  response, NSURL *  filePath, NSError *  error))completionHandler;
 
 
-+ (void)cancelAllRequest;
++ (void)cancelRequestTask:(NSURLSessionTask *)task;
 
++ (void)cancelAllRequestTask;
 
 @end
 
@@ -45,9 +58,12 @@
  获取请求结果
 
  @param responseObject http返回的内容
- @param error http错误信息
+ @param error   http错误信息
+ @param rsp     http服务返回信息
  @return 获取请求结果
  */
-+ (HZResponse *)responseWithReuslt:(id)responseObject error:(NSError *)error;
++ (HZResponse *)responseWithReuslt:(id)responseObject
+                             error:(NSError *)error
+                          response:(NSURLResponse *)rsp;
 
 @end

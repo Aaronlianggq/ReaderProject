@@ -46,45 +46,39 @@
 
 #pragma mark publick
 - (void)getBookParams:(NSDictionary *)param
-             callBack:(void (^)(NSObject<HZModuleModelProtocol> *model))callback
-    withProtocalClass:(Class)classModel{
-    if(![self isClassToModuleProtocal:classModel]){
-        return;
-    }
-    
+             callBack:(void (^)(HZBookModel *model))callback {
+
     [self->requestChannel get:self.getBookInfoUrl
                        params:param
                      callBack:^(HZResponse *response) {
                          id bookModel = nil;
                          if(!response.isError){
                              NSDictionary *body = response.body;
-                             NSObject <HZModuleModelProtocol> *model = [[classModel alloc] init];
+                             HZBookModel *model = [[HZBookModel alloc] init];
                              [model setParamsWithDictionary:body];
                              bookModel = model;
                          }
                          main_async_thread(^{
-                             callback(bookModel);
+                             if(callback)
+                                 callback(bookModel);
                          });
     }];
 }
 
 - (void)getUserShelfBooksParams:(NSDictionary *)param
-                       callBack:(void (^)(NSArray<NSObject<HZModuleModelProtocol> *> *bookModels))callback
-              withProtocalClass:(Class)classModel {
-    if(![self isClassToModuleProtocal:classModel]){
-        return;
-    }
-    
+                       callBack:(void (^)(NSArray<HZBookModel *> *bookModels))callback
+{
     [self->requestChannel get:self.getBookInfoUrl
                        params:param
                      callBack:^(HZResponse *response) {
                          NSArray *bookModels = nil;
                          if(!response.isError){
                              NSArray *bodyArr = response.body;
-                             bookModels = [classModel getModelsWithArray:bodyArr];
+                             bookModels = [HZBookModel getModelsWithArray:bodyArr];
                          }
                          main_async_thread(^{
-                             callback(bookModels);
+                             if(callback)
+                                 callback(bookModels);
                          });
 
     }];

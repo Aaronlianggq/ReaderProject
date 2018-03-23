@@ -6,8 +6,8 @@
 //  Copyright © 2018年 liang. All rights reserved.
 //
 
-#import "BookModel.h"
+#import "HZBookModel.h"
 
-@implementation BookModel
+@implementation HZBookModel
 
 @end

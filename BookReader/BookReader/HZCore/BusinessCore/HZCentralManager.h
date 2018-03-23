@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "HZBookModuleManger.h"
 #import "HZServerAddressManager.h"
+#import "HZLoginModuleManager.h"
+#import "HZUserModuleManager.h"
 
 #define hzManager     [HZCentralManager sharedInstance]
 

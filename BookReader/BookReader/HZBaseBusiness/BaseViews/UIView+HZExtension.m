@@ -11,74 +11,74 @@
 @implementation UIView (HZExtension)
 
 
-- (void)setHz_x:(CGFloat)Hz_x
+- (void)setHz_x:(CGFloat)hz_x
 {
     CGRect frame = self.frame;
-    frame.origin.x = Hz_x;
+    frame.origin.x = hz_x;
     self.frame = frame;
 }
 
-- (CGFloat)Hz_x
+- (CGFloat)hz_x
 {
     return self.frame.origin.x;
 }
 
-- (void)setHz_y:(CGFloat)Hz_y
+- (void)setHz_y:(CGFloat)hz_y
 {
     CGRect frame = self.frame;
-    frame.origin.y = Hz_y;
+    frame.origin.y = hz_y;
     self.frame = frame;
 }
 
-- (CGFloat)Hz_y
+- (CGFloat)hz_y
 {
     return self.frame.origin.y;
 }
 
-- (void)setHz_w:(CGFloat)Hz_w
+- (void)setHz_w:(CGFloat)hz_w
 {
     CGRect frame = self.frame;
-    frame.size.width = Hz_w;
+    frame.size.width = hz_w;
     self.frame = frame;
 }
 
-- (CGFloat)Hz_w
+- (CGFloat)hz_w
 {
     return self.frame.size.width;
 }
 
-- (void)setHz_h:(CGFloat)Hz_h
+- (void)setHz_h:(CGFloat)hz_h
 {
     CGRect frame = self.frame;
-    frame.size.height = Hz_h;
+    frame.size.height = hz_h;
     self.frame = frame;
 }
 
-- (CGFloat)Hz_h
+- (CGFloat)hz_h
 {
     return self.frame.size.height;
 }
 
-- (void)setHz_size:(CGSize)Hz_size
+- (void)setHz_size:(CGSize)hz_size
 {
     CGRect frame = self.frame;
-    frame.size = Hz_size;
+    frame.size = hz_size;
     self.frame = frame;
 }
 
-- (CGSize)Hz_size
+- (CGSize)hz_size
 {
     return self.frame.size;
 }
 
-- (void)setHz_origin:(CGPoint)Hz_origin
+- (void)setHz_origin:(CGPoint)hz_origin
 {
     CGRect frame = self.frame;
-    frame.origin = Hz_origin;
+    frame.origin = hz_origin;
     self.frame = frame;
 }
 
-- (CGPoint)Hz_origin
+- (CGPoint)hz_origin
 {
     return self.frame.origin;
 }

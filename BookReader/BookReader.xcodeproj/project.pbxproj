@@ -15,6 +15,9 @@
 		E434104D2060EFEE00B1413A /* UILabel+SizeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = E434104C2060EFEE00B1413A /* UILabel+SizeCalculator.m */; };
 		E43410552060F41900B1413A /* UIImage+Thumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = E43410542060F41900B1413A /* UIImage+Thumbnail.m */; };
 		E434105B2060F62300B1413A /* UIView+HZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E434105A2060F62300B1413A /* UIView+HZExtension.m */; };
+		E43411122063AD6C00B1413A /* FileModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E43411112063AD6C00B1413A /* FileModuleManager.m */; };
+		E43411162063B2DD00B1413A /* HZDownLoadModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E43411152063B2DD00B1413A /* HZDownLoadModuleManager.m */; };
+		E43411192063B30200B1413A /* HZDownLoadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E43411182063B30200B1413A /* HZDownLoadTask.m */; };
 		E445AFA6205ED1A1004DEE85 /* NSString+RectSize.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF96205ED1A1004DEE85 /* NSString+RectSize.m */; };
 		E445AFA9205ED1A1004DEE85 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF9B205ED1A1004DEE85 /* UIImage+Utilities.m */; };
 		E445AFAB205ED1A1004DEE85 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E445AF9E205ED1A1004DEE85 /* NSString+MD5.m */; };
@@ -121,9 +124,14 @@
 		E450C910205E754D00A3A645 /* HZModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C90F205E754D00A3A645 /* HZModule.m */; };
 		E450C917205E7E1E00A3A645 /* HZBookModuleManger.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C916205E7E1E00A3A645 /* HZBookModuleManger.m */; };
 		E450C91B205E838E00A3A645 /* HZBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C91A205E838E00A3A645 /* HZBaseModel.m */; };
-		E450C920205E83CA00A3A645 /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C91F205E83CA00A3A645 /* BookModel.m */; };
+		E450C920205E83CA00A3A645 /* HZBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C91F205E83CA00A3A645 /* HZBookModel.m */; };
 		E450C928205EB83D00A3A645 /* HZServerAddressManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C927205EB83D00A3A645 /* HZServerAddressManager.m */; };
 		E450C929205EBFF800A3A645 /* HZCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C912205E760600A3A645 /* HZCentralManager.m */; };
+		E4BA49792064D86900F028A1 /* HZCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BA49782064D86900F028A1 /* HZCache.m */; };
+		E4BA497D2064D96E00F028A1 /* HZLoginModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BA497C2064D96E00F028A1 /* HZLoginModuleManager.m */; };
+		E4BA49812064DA0400F028A1 /* HZUserModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BA49802064DA0400F028A1 /* HZUserModuleManager.m */; };
+		E4BA49862064DC8300F028A1 /* HZUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BA49852064DC8300F028A1 /* HZUserModel.m */; };
+		E4BA49892064E22800F028A1 /* NSObject+NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BA49882064E22800F028A1 /* NSObject+NSJSONSerialization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +151,12 @@
 		E43410542060F41900B1413A /* UIImage+Thumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Thumbnail.m"; sourceTree = "<group>"; };
 		E43410592060F62300B1413A /* UIView+HZExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HZExtension.h"; sourceTree = "<group>"; };
 		E434105A2060F62300B1413A /* UIView+HZExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HZExtension.m"; sourceTree = "<group>"; };
+		E43411102063AD6C00B1413A /* FileModuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileModuleManager.h; sourceTree = "<group>"; };
+		E43411112063AD6C00B1413A /* FileModuleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileModuleManager.m; sourceTree = "<group>"; };
+		E43411142063B2DD00B1413A /* HZDownLoadModuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZDownLoadModuleManager.h; sourceTree = "<group>"; };
+		E43411152063B2DD00B1413A /* HZDownLoadModuleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZDownLoadModuleManager.m; sourceTree = "<group>"; };
+		E43411172063B30200B1413A /* HZDownLoadTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZDownLoadTask.h; sourceTree = "<group>"; };
+		E43411182063B30200B1413A /* HZDownLoadTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZDownLoadTask.m; sourceTree = "<group>"; };
 		E445AF8F205ED1A1004DEE85 /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utilities.h"; sourceTree = "<group>"; };
 		E445AF91205ED1A1004DEE85 /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UUID.h"; sourceTree = "<group>"; };
 		E445AF93205ED1A1004DEE85 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
@@ -361,12 +375,22 @@
 		E450C916205E7E1E00A3A645 /* HZBookModuleManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBookModuleManger.m; sourceTree = "<group>"; };
 		E450C919205E838E00A3A645 /* HZBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZBaseModel.h; sourceTree = "<group>"; };
 		E450C91A205E838E00A3A645 /* HZBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBaseModel.m; sourceTree = "<group>"; };
-		E450C91E205E83CA00A3A645 /* BookModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
-		E450C91F205E83CA00A3A645 /* BookModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookModel.m; sourceTree = "<group>"; };
+		E450C91E205E83CA00A3A645 /* HZBookModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZBookModel.h; sourceTree = "<group>"; };
+		E450C91F205E83CA00A3A645 /* HZBookModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBookModel.m; sourceTree = "<group>"; };
 		E450C922205E88F900A3A645 /* HZDefineConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZDefineConfig.h; sourceTree = "<group>"; };
 		E450C926205EB83D00A3A645 /* HZServerAddressManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZServerAddressManager.h; sourceTree = "<group>"; };
 		E450C927205EB83D00A3A645 /* HZServerAddressManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZServerAddressManager.m; sourceTree = "<group>"; };
 		E4890C45205EE319009E9E31 /* HZModuleModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZModuleModelProtocol.h; sourceTree = "<group>"; };
+		E4BA49772064D86900F028A1 /* HZCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCache.h; sourceTree = "<group>"; };
+		E4BA49782064D86900F028A1 /* HZCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCache.m; sourceTree = "<group>"; };
+		E4BA497B2064D96E00F028A1 /* HZLoginModuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZLoginModuleManager.h; sourceTree = "<group>"; };
+		E4BA497C2064D96E00F028A1 /* HZLoginModuleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZLoginModuleManager.m; sourceTree = "<group>"; };
+		E4BA497F2064DA0400F028A1 /* HZUserModuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZUserModuleManager.h; sourceTree = "<group>"; };
+		E4BA49802064DA0400F028A1 /* HZUserModuleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZUserModuleManager.m; sourceTree = "<group>"; };
+		E4BA49842064DC8300F028A1 /* HZUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZUserModel.h; sourceTree = "<group>"; };
+		E4BA49852064DC8300F028A1 /* HZUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZUserModel.m; sourceTree = "<group>"; };
+		E4BA49872064E22800F028A1 /* NSObject+NSJSONSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSJSONSerialization.h"; sourceTree = "<group>"; };
+		E4BA49882064E22800F028A1 /* NSObject+NSJSONSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSJSONSerialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,15 +405,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E4340F33205F89C000B1413A /* HZHttpRequestChannel */ = {
-			isa = PBXGroup;
-			children = (
-				E4340F34205F8E5400B1413A /* HZHttpRequestChannel.h */,
-				E4340F35205F8E5400B1413A /* HZHttpRequestChannel.m */,
-			);
-			path = HZHttpRequestChannel;
-			sourceTree = "<group>";
-		};
 		E4340F37205F90E200B1413A /* GCDSafetyBlock */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,6 +477,26 @@
 			path = HZAppLoad;
 			sourceTree = "<group>";
 		};
+		E434110F2063AD1D00B1413A /* FileModuleManager */ = {
+			isa = PBXGroup;
+			children = (
+				E43411102063AD6C00B1413A /* FileModuleManager.h */,
+				E43411112063AD6C00B1413A /* FileModuleManager.m */,
+			);
+			path = FileModuleManager;
+			sourceTree = "<group>";
+		};
+		E43411132063B2B400B1413A /* DownLoadModuleManager */ = {
+			isa = PBXGroup;
+			children = (
+				E43411142063B2DD00B1413A /* HZDownLoadModuleManager.h */,
+				E43411152063B2DD00B1413A /* HZDownLoadModuleManager.m */,
+				E43411172063B30200B1413A /* HZDownLoadTask.h */,
+				E43411182063B30200B1413A /* HZDownLoadTask.m */,
+			);
+			path = DownLoadModuleManager;
+			sourceTree = "<group>";
+		};
 		E445AF8E205ED1A1004DEE85 /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +512,8 @@
 				E445AF96205ED1A1004DEE85 /* NSString+RectSize.m */,
 				E445AF99205ED1A1004DEE85 /* NSString+Verification.h */,
 				E445AFA3205ED1A1004DEE85 /* NSString+Verification.m */,
+				E4BA49872064E22800F028A1 /* NSObject+NSJSONSerialization.h */,
+				E4BA49882064E22800F028A1 /* NSObject+NSJSONSerialization.m */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
@@ -538,11 +575,11 @@
 		E450C70D205A59E800A3A645 /* BookReader */ = {
 			isa = PBXGroup;
 			children = (
+				E450C7CA205B9EDD00A3A645 /* ThirdLib */,
 				E434105C20610BD200B1413A /* HZAppLoad */,
 				E450C8DE205E507B00A3A645 /* HZCore */,
 				E450C7C7205B9EDD00A3A645 /* HZBaseBusiness */,
 				E450C7C9205B9EDD00A3A645 /* HZReaderBusiness */,
-				E450C7CA205B9EDD00A3A645 /* ThirdLib */,
 				E450C70E205A59E800A3A645 /* HZAppDelegate.h */,
 				E450C70F205A59E800A3A645 /* HZAppDelegate.m */,
 				E450C714205A59E800A3A645 /* Main.storyboard */,
@@ -578,6 +615,7 @@
 		E450C7C9205B9EDD00A3A645 /* HZReaderBusiness */ = {
 			isa = PBXGroup;
 			children = (
+				E4BA49822064DC3C00F028A1 /* Business */,
 				E450C91C205E83A500A3A645 /* Models */,
 				E450C7DD205BA11E00A3A645 /* Views */,
 				E450C7DC205BA11200A3A645 /* Controllers */,
@@ -928,6 +966,7 @@
 				E450C8DF205E508900A3A645 /* Http */,
 				E4340F37205F90E200B1413A /* GCDSafetyBlock */,
 				E43410462060EB6000B1413A /* UserDefault */,
+				E4BA49762064D83800F028A1 /* HZCache */,
 			);
 			path = HZCore;
 			sourceTree = "<group>";
@@ -935,13 +974,9 @@
 		E450C8DF205E508900A3A645 /* Http */ = {
 			isa = PBXGroup;
 			children = (
-				E4340F33205F89C000B1413A /* HZHttpRequestChannel */,
-				E450C8E0205E50B500A3A645 /* HZHttpSender.h */,
-				E450C8E1205E50B500A3A645 /* HZHttpSender.m */,
-				E450C8E3205E510400A3A645 /* HZURLRequest.h */,
-				E450C8E4205E510400A3A645 /* HZURLRequest.m */,
-				E450C90B205E526800A3A645 /* HZResponse.h */,
-				E450C90C205E526800A3A645 /* HZResponse.m */,
+				E4BA49752064D4A100F028A1 /* HttpSupport */,
+				E4340F34205F8E5400B1413A /* HZHttpRequestChannel.h */,
+				E4340F35205F8E5400B1413A /* HZHttpRequestChannel.m */,
 			);
 			path = Http;
 			sourceTree = "<group>";
@@ -967,6 +1002,7 @@
 		E450C91C205E83A500A3A645 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E4BA49832064DC6200F028A1 /* UserModel */,
 				E450C91D205E83AE00A3A645 /* BookModel */,
 			);
 			path = Models;
@@ -975,8 +1011,8 @@
 		E450C91D205E83AE00A3A645 /* BookModel */ = {
 			isa = PBXGroup;
 			children = (
-				E450C91E205E83CA00A3A645 /* BookModel.h */,
-				E450C91F205E83CA00A3A645 /* BookModel.m */,
+				E450C91E205E83CA00A3A645 /* HZBookModel.h */,
+				E450C91F205E83CA00A3A645 /* HZBookModel.m */,
 			);
 			path = BookModel;
 			sourceTree = "<group>";
@@ -984,8 +1020,6 @@
 		E450C923205E8A2400A3A645 /* BusinessCore */ = {
 			isa = PBXGroup;
 			children = (
-				E445AFB3205ED77C004DEE85 /* ServerAddressManager */,
-				E450C914205E7DCF00A3A645 /* BookModuleManager */,
 				E450C90E205E754D00A3A645 /* HZModule.h */,
 				E450C90F205E754D00A3A645 /* HZModule.m */,
 				E450C911205E760600A3A645 /* HZCentralManager.h */,
@@ -1001,6 +1035,68 @@
 				E450C922205E88F900A3A645 /* HZDefineConfig.h */,
 			);
 			path = HZDefineConfig;
+			sourceTree = "<group>";
+		};
+		E4BA49752064D4A100F028A1 /* HttpSupport */ = {
+			isa = PBXGroup;
+			children = (
+				E450C8E0205E50B500A3A645 /* HZHttpSender.h */,
+				E450C8E1205E50B500A3A645 /* HZHttpSender.m */,
+				E450C8E3205E510400A3A645 /* HZURLRequest.h */,
+				E450C8E4205E510400A3A645 /* HZURLRequest.m */,
+				E450C90B205E526800A3A645 /* HZResponse.h */,
+				E450C90C205E526800A3A645 /* HZResponse.m */,
+			);
+			path = HttpSupport;
+			sourceTree = "<group>";
+		};
+		E4BA49762064D83800F028A1 /* HZCache */ = {
+			isa = PBXGroup;
+			children = (
+				E4BA49772064D86900F028A1 /* HZCache.h */,
+				E4BA49782064D86900F028A1 /* HZCache.m */,
+			);
+			path = HZCache;
+			sourceTree = "<group>";
+		};
+		E4BA497A2064D94E00F028A1 /* LoginModuleManager */ = {
+			isa = PBXGroup;
+			children = (
+				E4BA497B2064D96E00F028A1 /* HZLoginModuleManager.h */,
+				E4BA497C2064D96E00F028A1 /* HZLoginModuleManager.m */,
+			);
+			path = LoginModuleManager;
+			sourceTree = "<group>";
+		};
+		E4BA497E2064D9C500F028A1 /* UserModuleManager */ = {
+			isa = PBXGroup;
+			children = (
+				E4BA497F2064DA0400F028A1 /* HZUserModuleManager.h */,
+				E4BA49802064DA0400F028A1 /* HZUserModuleManager.m */,
+			);
+			path = UserModuleManager;
+			sourceTree = "<group>";
+		};
+		E4BA49822064DC3C00F028A1 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				E4BA497E2064D9C500F028A1 /* UserModuleManager */,
+				E4BA497A2064D94E00F028A1 /* LoginModuleManager */,
+				E43411132063B2B400B1413A /* DownLoadModuleManager */,
+				E434110F2063AD1D00B1413A /* FileModuleManager */,
+				E445AFB3205ED77C004DEE85 /* ServerAddressManager */,
+				E450C914205E7DCF00A3A645 /* BookModuleManager */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		E4BA49832064DC6200F028A1 /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				E4BA49842064DC8300F028A1 /* HZUserModel.h */,
+				E4BA49852064DC8300F028A1 /* HZUserModel.m */,
+			);
+			path = UserModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1081,6 +1177,7 @@
 				E450C897205BD2CF00A3A645 /* SDWebImageImageIOCoder.m in Sources */,
 				E445AFAF205ED1A1004DEE85 /* NSString+Verification.m in Sources */,
 				E450C87F205BD2CF00A3A645 /* UIImageView+HighlightedWebCache.m in Sources */,
+				E4BA497D2064D96E00F028A1 /* HZLoginModuleManager.m in Sources */,
 				E445AFAD205ED1A1004DEE85 /* NSString+UUID.m in Sources */,
 				E450C83A205BD25E00A3A645 /* MASViewConstraint.m in Sources */,
 				E450C87D205BD2CF00A3A645 /* MKAnnotationView+WebCache.m in Sources */,
@@ -1089,6 +1186,7 @@
 				E434105B2060F62300B1413A /* UIView+HZExtension.m in Sources */,
 				E434104D2060EFEE00B1413A /* UILabel+SizeCalculator.m in Sources */,
 				E450C834205BD25E00A3A645 /* MASCompositeConstraint.m in Sources */,
+				E4BA49792064D86900F028A1 /* HZCache.m in Sources */,
 				E450C8DC205BD3C800A3A645 /* MJRefreshComponent.m in Sources */,
 				E450C837205BD25E00A3A645 /* NSArray+MASAdditions.m in Sources */,
 				E445AFA9205ED1A1004DEE85 /* UIImage+Utilities.m in Sources */,
@@ -1097,6 +1195,7 @@
 				E450C8CA205BD3C800A3A645 /* MJRefreshConst.m in Sources */,
 				E450C90D205E526800A3A645 /* HZResponse.m in Sources */,
 				E450C88D205BD2CF00A3A645 /* SDImageCache.m in Sources */,
+				E4BA49892064E22800F028A1 /* NSObject+NSJSONSerialization.m in Sources */,
 				E450C884205BD2CF00A3A645 /* SDWebImageDownloader.m in Sources */,
 				E450C8DA205BD3C800A3A645 /* MJRefreshBackFooter.m in Sources */,
 				E450C83B205BD25E00A3A645 /* MASViewAttribute.m in Sources */,
@@ -1115,7 +1214,7 @@
 				E450C898205BD2CF00A3A645 /* UIButton+WebCache.m in Sources */,
 				E450C887205BD2CF00A3A645 /* SDWebImageCoderHelper.m in Sources */,
 				E450C71E205A59E800A3A645 /* main.m in Sources */,
-				E450C920205E83CA00A3A645 /* BookModel.m in Sources */,
+				E450C920205E83CA00A3A645 /* HZBookModel.m in Sources */,
 				E450C838205BD25E00A3A645 /* View+MASAdditions.m in Sources */,
 				E450C87E205BD2CF00A3A645 /* SDWebImageManager.m in Sources */,
 				E450C7DA205BA09400A3A645 /* HZBaseNavigationViewController.m in Sources */,
@@ -1132,6 +1231,7 @@
 				E450C839205BD25E00A3A645 /* MASConstraint.m in Sources */,
 				E450C893205BD2CF00A3A645 /* SDWebImageGIFCoder.m in Sources */,
 				E450C882205BD2CF00A3A645 /* SDWebImageCodersManager.m in Sources */,
+				E43411162063B2DD00B1413A /* HZDownLoadModuleManager.m in Sources */,
 				E450C8CE205BD3C800A3A645 /* UIView+MJExtension.m in Sources */,
 				E450C91B205E838E00A3A645 /* HZBaseModel.m in Sources */,
 				E450C7EF205BA3D600A3A645 /* ClassificationController.m in Sources */,
@@ -1159,6 +1259,7 @@
 				E445AFD1205ED90F004DEE85 /* NSObject+MJClass.m in Sources */,
 				E450C710205A59E800A3A645 /* HZAppDelegate.m in Sources */,
 				E450C8D2205BD3C800A3A645 /* MJRefreshAutoStateFooter.m in Sources */,
+				E43411192063B30200B1413A /* HZDownLoadTask.m in Sources */,
 				E450C88E205BD2CF00A3A645 /* SDWebImageDownloaderOperation.m in Sources */,
 				E450C833205BD25E00A3A645 /* ViewController+MASAdditions.m in Sources */,
 				E450C890205BD2CF00A3A645 /* NSData+ImageContentType.m in Sources */,
@@ -1166,11 +1267,13 @@
 				E450C8D0205BD3C800A3A645 /* MJRefreshBackStateFooter.m in Sources */,
 				E450C8D3205BD3C800A3A645 /* MJRefreshAutoGifFooter.m in Sources */,
 				E450C813205BD1F200A3A645 /* AFSecurityPolicy.m in Sources */,
+				E4BA49862064DC8300F028A1 /* HZUserModel.m in Sources */,
 				E450C7CE205B9F2000A3A645 /* HZBaseView.m in Sources */,
 				E450C910205E754D00A3A645 /* HZModule.m in Sources */,
 				E450C8D4205BD3C800A3A645 /* MJRefreshAutoNormalFooter.m in Sources */,
 				E450C8D1205BD3C800A3A645 /* MJRefreshBackNormalFooter.m in Sources */,
 				E450C8CF205BD3C800A3A645 /* MJRefreshBackGifFooter.m in Sources */,
+				E43411122063AD6C00B1413A /* FileModuleManager.m in Sources */,
 				E445AFCE205ED90F004DEE85 /* NSObject+MJCoding.m in Sources */,
 				E450C8E5205E510400A3A645 /* HZURLRequest.m in Sources */,
 				E450C889205BD2CF00A3A645 /* SDWebImagePrefetcher.m in Sources */,
@@ -1182,6 +1285,7 @@
 				E450C8D9205BD3C800A3A645 /* MJRefreshHeader.m in Sources */,
 				E445AFD2205ED90F004DEE85 /* NSString+MJExtension.m in Sources */,
 				E445AFD5205ED910004DEE85 /* MJFoundation.m in Sources */,
+				E4BA49812064DA0400F028A1 /* HZUserModuleManager.m in Sources */,
 				E450C7D7205B9FCB00A3A645 /* HZBaseViewController.m in Sources */,
 				E450C88B205BD2CF00A3A645 /* NSButton+WebCache.m in Sources */,
 				E450C8CC205BD3C800A3A645 /* UIScrollView+MJExtension.m in Sources */,

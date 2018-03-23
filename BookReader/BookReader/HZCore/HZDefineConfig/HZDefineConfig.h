@@ -49,5 +49,11 @@
 #define SWS __weak typeof(weakSelf) strongSelf = weakSelf;
 #define StrongObj(obj) __strong typeof(obj) strongObj = obj;
 
+/** file */
+#define HZ_Document  [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+#define HZ_Cache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+#define HZ_Library [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+#define HZ_Temp  NSTemporaryDirectory()
+
 
 #endif /* DefineConfig_h */

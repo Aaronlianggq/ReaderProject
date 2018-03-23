@@ -24,7 +24,7 @@
 }
 
 - (BOOL)isError{
-    return  (self.serverStatusCode != 200 || _error);
+    return  (self.rsp.statusCode !=200  || self.serverStatusCode != 200 ) ;
 }
 
 - (HZResponseStatusCode) serverStatusCode {
