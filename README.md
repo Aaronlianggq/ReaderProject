@@ -23,11 +23,16 @@ HZBaseBusiness 目录
 
 HZReaderBusiness 目录  
    对业务逻辑、数据转向、路由控制、模块管理的具体实现，子模块管理实现在Business目录，实现数据获取、转向、model对象行为等操作
-   BookModuleManager  		对书籍管理起
+   
+   BookModuleManager  		对书籍管理操作
+  
    DownLoadModuleManager  	资源下载任务管理器
-   FileModuleManager		文件操作管理器
+   
+   FileModuleManager		   文件操作管理器
+   
    LoginModuleManager		登录授权管理器
-   UserModuleManager		用户人员管理器
+   
+   UserModuleManager		   用户人员管理器
 
 
 管理器获取 。  
