@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "HZBaseNavigationViewController.h"
+#import "HZBaseView.h"
 
 @interface HZBaseViewController : UIViewController
 
 @property (nonatomic,weak) HZBaseNavigationViewController *hzNavigationController;
+
+/// self.view
+@property (nonatomic,strong,readonly) HZBaseView *baseView;
 
 @end
