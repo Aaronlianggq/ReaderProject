@@ -127,6 +127,10 @@
 		E450C920205E83CA00A3A645 /* HZBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C91F205E83CA00A3A645 /* HZBookModel.m */; };
 		E450C928205EB83D00A3A645 /* HZServerAddressManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C927205EB83D00A3A645 /* HZServerAddressManager.m */; };
 		E450C929205EBFF800A3A645 /* HZCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E450C912205E760600A3A645 /* HZCentralManager.m */; };
+		E45DEFBD206A8BF10070DE6D /* HZBookShelfCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E45DEFBC206A8BF10070DE6D /* HZBookShelfCollectionCell.m */; };
+		E45DEFC0206A8D580070DE6D /* HZImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E45DEFBF206A8D580070DE6D /* HZImageView.m */; };
+		E45DEFD5206A9D510070DE6D /* HZBookShelfCellHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E45DEFD4206A9D510070DE6D /* HZBookShelfCellHeader.m */; };
+		E45DEFD8206A9D7A0070DE6D /* HZBookShelfCellFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E45DEFD7206A9D7A0070DE6D /* HZBookShelfCellFooter.m */; };
 		E4BA49792064D86900F028A1 /* HZCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BA49782064D86900F028A1 /* HZCache.m */; };
 		E4BA497D2064D96E00F028A1 /* HZLoginModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BA497C2064D96E00F028A1 /* HZLoginModuleManager.m */; };
 		E4BA49812064DA0400F028A1 /* HZUserModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BA49802064DA0400F028A1 /* HZUserModuleManager.m */; };
@@ -380,6 +384,14 @@
 		E450C922205E88F900A3A645 /* HZDefineConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZDefineConfig.h; sourceTree = "<group>"; };
 		E450C926205EB83D00A3A645 /* HZServerAddressManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZServerAddressManager.h; sourceTree = "<group>"; };
 		E450C927205EB83D00A3A645 /* HZServerAddressManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZServerAddressManager.m; sourceTree = "<group>"; };
+		E45DEFBB206A8BF10070DE6D /* HZBookShelfCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZBookShelfCollectionCell.h; sourceTree = "<group>"; };
+		E45DEFBC206A8BF10070DE6D /* HZBookShelfCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBookShelfCollectionCell.m; sourceTree = "<group>"; };
+		E45DEFBE206A8D580070DE6D /* HZImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZImageView.h; sourceTree = "<group>"; };
+		E45DEFBF206A8D580070DE6D /* HZImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZImageView.m; sourceTree = "<group>"; };
+		E45DEFD3206A9D510070DE6D /* HZBookShelfCellHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZBookShelfCellHeader.h; sourceTree = "<group>"; };
+		E45DEFD4206A9D510070DE6D /* HZBookShelfCellHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBookShelfCellHeader.m; sourceTree = "<group>"; };
+		E45DEFD6206A9D7A0070DE6D /* HZBookShelfCellFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZBookShelfCellFooter.h; sourceTree = "<group>"; };
+		E45DEFD7206A9D7A0070DE6D /* HZBookShelfCellFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZBookShelfCellFooter.m; sourceTree = "<group>"; };
 		E4890C45205EE319009E9E31 /* HZModuleModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZModuleModelProtocol.h; sourceTree = "<group>"; };
 		E4BA49772064D86900F028A1 /* HZCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCache.h; sourceTree = "<group>"; };
 		E4BA49782064D86900F028A1 /* HZCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCache.m; sourceTree = "<group>"; };
@@ -419,6 +431,8 @@
 			children = (
 				E4340FC0205FC2D200B1413A /* UIImageView+HZImageLoad.h */,
 				E4340FC1205FC2D200B1413A /* UIImageView+HZImageLoad.m */,
+				E45DEFBE206A8D580070DE6D /* HZImageView.h */,
+				E45DEFBF206A8D580070DE6D /* HZImageView.m */,
 			);
 			path = ImageViewLoad;
 			sourceTree = "<group>";
@@ -673,6 +687,7 @@
 		E450C7DD205BA11E00A3A645 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E45DEFBA206A8BB50070DE6D /* BookShelf */,
 				E434104A2060EFDF00B1413A /* Category */,
 				E4340FC3205FC3DC00B1413A /* UIScrollViewRefresh */,
 				E4340FBF205FC28000B1413A /* ImageViewLoad */,
@@ -1037,6 +1052,19 @@
 			path = HZDefineConfig;
 			sourceTree = "<group>";
 		};
+		E45DEFBA206A8BB50070DE6D /* BookShelf */ = {
+			isa = PBXGroup;
+			children = (
+				E45DEFBB206A8BF10070DE6D /* HZBookShelfCollectionCell.h */,
+				E45DEFBC206A8BF10070DE6D /* HZBookShelfCollectionCell.m */,
+				E45DEFD3206A9D510070DE6D /* HZBookShelfCellHeader.h */,
+				E45DEFD4206A9D510070DE6D /* HZBookShelfCellHeader.m */,
+				E45DEFD6206A9D7A0070DE6D /* HZBookShelfCellFooter.h */,
+				E45DEFD7206A9D7A0070DE6D /* HZBookShelfCellFooter.m */,
+			);
+			path = BookShelf;
+			sourceTree = "<group>";
+		};
 		E4BA49752064D4A100F028A1 /* HttpSupport */ = {
 			isa = PBXGroup;
 			children = (
@@ -1214,6 +1242,7 @@
 				E450C88F205BD2CF00A3A645 /* SDWebImageTransition.m in Sources */,
 				E450C7D1205B9F4200A3A645 /* HZBaseTableView.m in Sources */,
 				E43410492060EBEE00B1413A /* HZUserDefault.m in Sources */,
+				E45DEFC0206A8D580070DE6D /* HZImageView.m in Sources */,
 				E450C891205BD2CF00A3A645 /* UIImageView+WebCache.m in Sources */,
 				E450C88C205BD2CF00A3A645 /* SDAnimatedImageRep.m in Sources */,
 				E4340F3A205F914D00B1413A /* HZGCDSafetyBlock.m in Sources */,
@@ -1250,6 +1279,7 @@
 				E450C80F205BD1F200A3A645 /* AFHTTPSessionManager.m in Sources */,
 				E43410552060F41900B1413A /* UIImage+Thumbnail.m in Sources */,
 				E445AFCF205ED90F004DEE85 /* MJExtensionConst.m in Sources */,
+				E45DEFD8206A9D7A0070DE6D /* HZBookShelfCellFooter.m in Sources */,
 				E445AFCC205ED90F004DEE85 /* NSObject+MJKeyValue.m in Sources */,
 				E450C8D7205BD3C800A3A645 /* MJRefreshGifHeader.m in Sources */,
 				E450C811205BD1F200A3A645 /* AFURLRequestSerialization.m in Sources */,
@@ -1268,7 +1298,9 @@
 				E450C710205A59E800A3A645 /* HZAppDelegate.m in Sources */,
 				E450C8D2205BD3C800A3A645 /* MJRefreshAutoStateFooter.m in Sources */,
 				E43411192063B30200B1413A /* HZDownLoadTask.m in Sources */,
+				E45DEFD5206A9D510070DE6D /* HZBookShelfCellHeader.m in Sources */,
 				E450C88E205BD2CF00A3A645 /* SDWebImageDownloaderOperation.m in Sources */,
+				E45DEFBD206A8BF10070DE6D /* HZBookShelfCollectionCell.m in Sources */,
 				E450C833205BD25E00A3A645 /* ViewController+MASAdditions.m in Sources */,
 				E450C890205BD2CF00A3A645 /* NSData+ImageContentType.m in Sources */,
 				E450C7F8205BB78300A3A645 /* LGQSideViewController.m in Sources */,

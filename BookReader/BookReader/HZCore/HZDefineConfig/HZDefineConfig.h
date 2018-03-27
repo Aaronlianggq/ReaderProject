@@ -10,6 +10,8 @@
 
 #ifndef DefineConfig_h
 #define DefineConfig_h
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 // DEBUG_LOG
 #ifdef DEBUG
@@ -30,9 +32,15 @@
 #define Is_Phone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define Is_PhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
-#define HZAppScale  MAX([[UIScreen mainScreen] scale],2) //设备分辨率  最小2x图
-#define HZScreenBound [UIScreen mainScreen].bounds
-#define HZAppInfoDictionary  [[NSBundle mainBundle] infoDictionary]  //app应用数据
+#define AppScale            MAX([[UIScreen mainScreen] scale],2) //设备分辨率  最小2x图
+#define ScreenBound         [UIScreen mainScreen].bounds
+#define ScreenWidth         ScreenBound.size.width
+#define ScreenHeight        ScreenBound.size.height
+#define AppInfoDictionary   [[NSBundle mainBundle] infoDictionary]  //app应用数据
+
+#define PhoneBit (ScreenWidth/375.0)            //phone比例基于375宽度
+#define SizeBit (Is_Phone ? PhoneBit : 1.6)     //设定比例 宽高基于phone的大小 ipad * 1.6
+#define SizeFontBit (Is_Phone ? 1.0 : 1.2)      //设定比例 字体基于phone的大小 ipad * 1.2
 
 // 获取RGB颜色
 #define HZRGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
