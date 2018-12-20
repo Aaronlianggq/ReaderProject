@@ -1,16 +1,12 @@
 # ReaderProject
 阅读器项目git关联
-
 1、联系git账户名（Aaronlianggq） 把你ssh文件(id_rsa.pub的key值)添加到账户中 
-
 2、进入git bash 执行命令：git clone git@github.com:Aaronlianggq/ReaderProject.git
 
 
 项目依赖结构
    HZReaderBusiness ->(依赖) HZBaseBusiness -> HZCore -> ThirdLib -> IOSFramework
    层级之间完全解耦，根据依赖层次，可以删除高层文件夹（比如HZReaderBusiness）整个项目编译不会报错 
-
---------
 
 ThirdLib 目录
    添加第三方依赖库
